@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React/Button FullWidth smoke-test 1`] = `
+<button class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white btn-block">
+  Press here
+</button>
+`;
+
+exports[`React/Button InteractionTest play-test 1`] = `
+<button class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white">
+  Press here
+</button>
+`;
+
+exports[`React/Button Primary smoke-test 1`] = `
+<button class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white">
+  Press here
+</button>
+`;
+
+exports[`React/Button Secondary smoke-test 1`] = `
+<button class="btn text-base h-auto min-h-fit px-2 py-2 active:bg-primary/30 disabled:opacity-40 disabled:border-primary disabled:text-primary disabled:bg-white">
+  Press here
+</button>
+`;
+
+exports[`React/Button WithIcon smoke-test 1`] = `
+<button class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewbox="0 0 24 24"
+       fill="currentColor"
+       class="inline-block  mr-1 icon-info"
+       width="19"
+       aria-hidden="true"
+  >
+    <path d="M12,24A12,12,0,1,1,24,12,12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z"
+          stroke="none"
+    >
+    </path>
+    <path d="M14,19H12V12H10V10h2a2,2,0,0,1,2,2Z"
+          stroke="none"
+    >
+    </path>
+    <circle cx="12"
+            cy="6.5"
+            r="1.5"
+    >
+    </circle>
+  </svg>
+  <span>
+    More info
+  </span>
+</button>
+`;

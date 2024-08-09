@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, fn, userEvent, within } from '@storybook/test';
 
 import { Checkbox } from './Checkbox';
 
@@ -12,11 +12,7 @@ const meta = {
     name: 'demo-checkbox',
     checked: undefined,
     hasError: undefined,
-  },
-  argTypes: {
-    onChange: {
-      action: 'changed',
-    },
+    onChange: fn(),
   },
 } satisfies Meta<typeof Checkbox>;
 
@@ -48,19 +44,14 @@ export const Invalid: Story = {
   },
 };
 
-function exampleHandler(e: Event) {
-  console.info('event handled', e);
-}
-
 /**
- * Technical reference: `onChange` handler required when the state is controlled
+ * Technical reference: `onChange` handler required when the state is controlled and the `checked` prop should be derived from state
  */
 export const ControlledChecked: Story = {
   args: {
     label: 'Can\'t click me. Toggle me in React using the "checked" prop',
     name: 'demo-controlled-checkbox',
     checked: true,
-    onChange: () => exampleHandler,
   },
 };
 

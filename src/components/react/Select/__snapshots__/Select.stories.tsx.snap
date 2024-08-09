@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React/Select Basic smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="select-box-demo-select-box"
+  >
+    <span class="label-text text-base font-bold">
+      Favourite fruit
+    </span>
+  </label>
+  <select id="select-box-demo-select-box"
+          class="placeholder:text-subtle select select-primary text-base min-h-fit rounded-[--rounded-field] [&amp;:has(option[disabled]:default:checked)]:text-subtle h-[42px] px-3"
+          name="demo-select-box"
+  >
+    <option value
+            disabled
+            class="text-red-700"
+            selected
+    >
+      Choose a fruit
+    </option>
+    <option value="a">
+      Apple
+    </option>
+    <option value="b">
+      Banana
+    </option>
+    <option value="c">
+      Cherries
+    </option>
+    <option value="d">
+      Dragon Fruit
+    </option>
+    <option value="g">
+      Grapefruit
+    </option>
+    <option value="k">
+      Kiwi
+    </option>
+    <option value="m">
+      Mango
+    </option>
+    <option value="o">
+      Orange
+    </option>
+    <option value="r">
+      Raspberries
+    </option>
+  </select>
+</div>
+`;
+
+exports[`React/Select DefaultValue smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="select-box-demo-select-box-default"
+  >
+    <span class="label-text text-base font-bold">
+      Favourite fruit
+    </span>
+  </label>
+  <select id="select-box-demo-select-box-default"
+          class="placeholder:text-subtle select select-primary text-base min-h-fit rounded-[--rounded-field] [&amp;:has(option[disabled]:default:checked)]:text-subtle h-[42px] px-3"
+          name="demo-select-box-default"
+  >
+    <option value
+            disabled
+            class="text-red-700"
+    >
+      Choose a fruit
+    </option>
+    <option value="a">
+      Apple
+    </option>
+    <option value="b">
+      Banana
+    </option>
+    <option value="c">
+      Cherries
+    </option>
+    <option value="d">
+      Dragon Fruit
+    </option>
+    <option value="g">
+      Grapefruit
+    </option>
+    <option value="k">
+      Kiwi
+    </option>
+    <option value="m">
+      Mango
+    </option>
+    <option value="o">
+      Orange
+    </option>
+    <option value="r">
+      Raspberries
+    </option>
+  </select>
+</div>
+`;
+
+exports[`React/Select InteractionTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="select-box-interaction-test"
+  >
+    <span class="label-text text-base font-bold">
+      Favourite fruit
+    </span>
+  </label>
+  <select id="select-box-interaction-test"
+          class="placeholder:text-subtle select select-primary text-base min-h-fit rounded-[--rounded-field] [&amp;:has(option[disabled]:default:checked)]:text-subtle h-[42px] px-3"
+          name="interaction-test"
+  >
+    <option value
+            disabled
+            class="text-red-700"
+            selected
+    >
+      Choose a fruit
+    </option>
+    <option value="a">
+      Apple
+    </option>
+    <option value="b">
+      Banana
+    </option>
+    <option value="c">
+      Cherries
+    </option>
+    <option value="d">
+      Dragon Fruit
+    </option>
+    <option value="g">
+      Grapefruit
+    </option>
+    <option value="k">
+      Kiwi
+    </option>
+    <option value="m">
+      Mango
+    </option>
+    <option value="o">
+      Orange
+    </option>
+    <option value="r">
+      Raspberries
+    </option>
+  </select>
+</div>
+`;
+
+exports[`React/Select Invalid smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="select-box-demo-select-box-invalid"
+  >
+    <span class="label-text text-base font-bold">
+      Favourite fruit
+    </span>
+  </label>
+  <select id="select-box-demo-select-box-invalid"
+          class="placeholder:text-subtle select select-primary text-base min-h-fit rounded-[--rounded-field] [&amp;:has(option[disabled]:default:checked)]:text-subtle border-2 h-[42px] px-3 select-error"
+          aria-labelledby="select-box-demo-select-box-invalid-feedback"
+          name="demo-select-box-invalid"
+  >
+    <option value
+            disabled
+            class="text-red-700"
+            selected
+    >
+      Choose a fruit
+    </option>
+    <option value="a">
+      Apple
+    </option>
+    <option value="b">
+      Banana
+    </option>
+    <option value="c">
+      Cherries
+    </option>
+    <option value="d">
+      Dragon Fruit
+    </option>
+    <option value="g">
+      Grapefruit
+    </option>
+    <option value="k">
+      Kiwi
+    </option>
+    <option value="m">
+      Mango
+    </option>
+    <option value="o">
+      Orange
+    </option>
+    <option value="r">
+      Raspberries
+    </option>
+  </select>
+  <label class="leading-5 mt-2 [&amp;>label]:mt-0 text-error fill-error flex"
+         id="select-box-demo-select-box-invalid-feedback"
+  >
+    <div class="-mt-0.5">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 24 24"
+           fill="currentColor"
+           class="inline-block  w-6 h-6 mr-1.5 mb-0.5 icon-exclamation"
+           aria-hidden="true"
+      >
+        <path d="m22.242,5.272l-3.515-3.515c-1.133-1.133-2.64-1.757-4.242-1.757h-4.971c-1.603,0-3.109.624-4.242,1.757l-3.515,3.514c-1.134,1.133-1.758,2.64-1.758,4.243v4.971c0,1.603.624,3.11,1.758,4.243l3.515,3.515c1.133,1.133,2.64,1.757,4.242,1.757h4.971c1.603,0,3.109-.624,4.242-1.757l3.515-3.514c1.134-1.133,1.758-2.64,1.758-4.243v-4.971c0-1.603-.624-3.11-1.758-4.243Zm-.242,9.213c0,1.069-.416,2.073-1.172,2.829l-3.515,3.515c-.756.755-1.76,1.171-2.828,1.171h-4.971c-1.068,0-2.072-.416-2.828-1.171l-3.515-3.515c-.756-.755-1.172-1.759-1.172-2.828v-4.971c0-1.069.416-2.073,1.172-2.829l3.515-3.515c.756-.755,1.76-1.171,2.828-1.171h4.971c1.068,0,2.072.416,2.828,1.171l3.515,3.515c.756.755,1.172,1.759,1.172,2.828v4.971Zm-11-.485V6c0-.552.447-1,1-1s1,.448,1,1v8c0,.552-.447,1-1,1s-1-.448-1-1Zm2.5,3.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Z"
+              stroke="none"
+        >
+        </path>
+      </svg>
+    </div>
+    Make sure you choose one
+  </label>
+</div>
+`;

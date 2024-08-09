@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React/Text Area Basic smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="text-area-demo-textarea-field"
+  >
+    <span class="label-text text-base font-bold">
+      Tell me a story
+    </span>
+  </label>
+  <textarea id="text-area-demo-textarea-field"
+            class="placeholder:text-subtle textarea textarea-primary text-base rounded-[--rounded-field]"
+            name="demo-textarea-field"
+            placeholder="Once upon a time..."
+  >
+  </textarea>
+</div>
+`;
+
+exports[`React/Text Area InteractionTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="text-area-interaction-test"
+  >
+    <span class="label-text text-base font-bold">
+      Tell me a story
+    </span>
+  </label>
+  <textarea id="text-area-interaction-test"
+            class="placeholder:text-subtle textarea textarea-primary text-base rounded-[--rounded-field]"
+            name="interaction-test"
+            placeholder="Once upon a time..."
+  >
+  </textarea>
+</div>
+`;

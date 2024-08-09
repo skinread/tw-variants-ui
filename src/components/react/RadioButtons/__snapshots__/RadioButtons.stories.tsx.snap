@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React/Radio Buttons Basic smoke-test 1`] = `
+<div class="form-control flex-row">
+  <label class="label items-start px-0 cursor-pointer">
+    <input type="radio"
+           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           name="demo-radio-buttons"
+           value="1"
+           checked
+    >
+    <span class="label-text text-base ml-2.5">
+      Option one
+    </span>
+  </label>
+</div>
+<div class="form-control flex-row">
+  <label class="label items-start px-0 cursor-pointer">
+    <input type="radio"
+           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           name="demo-radio-buttons"
+           value="2"
+    >
+    <span class="label-text text-base ml-2.5">
+      Option two
+    </span>
+  </label>
+</div>
+<div class="form-control flex-row">
+  <label class="label items-start px-0 cursor-pointer">
+    <input type="radio"
+           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           name="demo-radio-buttons"
+           value="3"
+    >
+    <span class="label-text text-base ml-2.5">
+      Option three
+    </span>
+  </label>
+</div>
+`;
+
+exports[`React/Radio Buttons InteractionTest play-test 1`] = `
+<div class="form-control flex-row">
+  <label class="label items-start px-0 cursor-pointer">
+    <input type="radio"
+           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           name="demo-radio-buttons"
+           value="1"
+    >
+    <span class="label-text text-base ml-2.5">
+      Option one
+    </span>
+  </label>
+</div>
+<div class="form-control flex-row">
+  <label class="label items-start px-0 cursor-pointer">
+    <input type="radio"
+           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           name="demo-radio-buttons"
+           value="2"
+    >
+    <span class="label-text text-base ml-2.5">
+      Option two
+    </span>
+  </label>
+</div>
+<div class="form-control flex-row">
+  <label class="label items-start px-0 cursor-pointer">
+    <input type="radio"
+           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           name="demo-radio-buttons"
+           value="3"
+    >
+    <span class="label-text text-base ml-2.5">
+      Option three
+    </span>
+  </label>
+</div>
+`;
