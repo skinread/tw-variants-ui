@@ -8,12 +8,12 @@
 
 A collection of useful React components for building consitent frontend experiences, styled in a typesafe and almost entirely framework-angnostic way via Tailwind.
 
-- `tailwind-variants` provides the organisation structure for components and generate the props
+- `tailwind-variants` provides the organisation structure for components and generate variant-related props
 - `daisyui` is the base component styles and these provider
 
 ## Storybook playground
 
-[Tailwind Variants UI]()
+[Tailwind Variants UI](https://skinread.github.io/tw-variants-ui/)
 
 ## Installation
 
