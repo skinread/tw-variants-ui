@@ -6,19 +6,20 @@
 [![Deploy Storybook Site](https://github.com/skinread/tw-variants-ui/actions/workflows/storybook.yml/badge.svg)](https://github.com/skinread/tw-variants-ui/actions/workflows/storybook.yml)
 [![Publish Component Library](https://github.com/skinread/tw-variants-ui/actions/workflows/publish.yml/badge.svg)](https://github.com/skinread/tw-variants-ui/actions/workflows/publish.yml)
 
-LINKS
+A collection of useful React components for building consitent frontend experiences, styled in a typesafe and almost entirely framework-angnostic way via Tailwind.
 
-- [Storybook]()
+- `tailwind-variants` provides the organisation structure for components and generate the props
+- `daisyui` is the base component styles and these provider
 
-Useful components for building consitent frontend experiences in a typesafe and almost entirely framework-angnostic way.
+## Storybook playground
 
-===
+[Tailwind Variants UI]()
 
 ## Installation
 
 **Consumers**
 
-Install tailwind and necessary dependencies in your project and use the preset.
+Scaffold a project using Vite and install tailwind and necessary dependencies in your project and use the preset.
 
 ### Tailwind Installation
 
@@ -54,17 +55,15 @@ export default {
 
 You can extend all the usual Tailwind config following on from the preset, for reference see [Tailwind Docs](https://tailwindcss.com/docs/guides/vite)
 
-#### Directives
-
-Ensure the standard Tailwind directives are added to the main stylesheet.
-
-## 1 - React
-
-### Vite
+#### Vite
 
 Ensure the main css file has Tailwind directives and is being loaded in to your application. Vite should take care of the rest.
 
-### Components
+#### Directives
+
+Ensure the standard Tailwind directives are added to the application stylesheet.
+
+## React Components
 
 Once all installation steps are complete you simply import the components into your React application and configure the props:
 
@@ -79,10 +78,6 @@ const MyComponent = () => {
   );
 };
 ```
-
-## 2 - CSS only
-
-_Content for CSS only usage to be added once use cases are established_
 
 ## Development
 

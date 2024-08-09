@@ -25,7 +25,7 @@
     "dev": "storybook dev -p 6006",
     "dev:test": "npm run storybook:test",
     "build": "npm run bundle:react -- --clean && npm run copy:themes && npm run bundle:css",
-    "bundle:css": "tailwindcss -i ./src/styles/custom-elements.css -o ./dist/css/custom-elements.css --minify",
+    "bundle:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/css/tailwind.css --minify",
     "bundle:react": "tsup src/components/react/index.ts --outDir dist/react --sourcemap",
     "copy:themes": "cpy 'src/themes/*' 'dist/themes/' && cpy 'src/tailwind-preset.*' dist",
     "check-deps": "npx npm-check-updates@latest --interactive --format group",
