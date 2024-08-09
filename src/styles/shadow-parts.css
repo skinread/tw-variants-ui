@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* example of declarations for applying tailwind to web component shadow dom parts */
+
+vui-button::part(component),
+vui-button-link::part(component) {
+  @apply btn;
+}
+
+vui-button[color='primary']::part(component),
+vui-button-link[color='primary']::part(component) {
+  @apply btn-primary;
+}
+
+vui-button[color='secondary']::part(component),
+vui-button-link[color='secondary']::part(component) {
+  @apply btn-secondary;
+}
+
+vui-button[color='neutral']::part(component),
+vui-button-link[color='neutral']::part(component) {
+  @apply btn-neutral;
+}

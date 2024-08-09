@@ -1,0 +1,26 @@
+{
+  "git": {
+    "commitMessage": "Publish Tailwind Variants UI v${version}",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
+  },
+  "hooks": {
+    "before:init": [
+      "git pull",
+      "npm run lint"
+    ],
+    "before:bump": [
+      "npm test",
+      "npx auto-changelog -p"
+    ],
+    "before:release": [
+      "npm run build"
+    ]
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": false,
+    "skipChecks": true
+  }
+}

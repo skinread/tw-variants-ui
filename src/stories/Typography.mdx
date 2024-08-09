@@ -1,0 +1,74 @@
+import {
+  ColorItem,
+  ColorPalette,
+  Meta,
+  Typeset,
+  Unstyled,
+} from '@storybook/blocks';
+
+<Meta title="Typography" />
+
+# Typography Scale
+
+export const typography = {
+  family:
+    'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+  weight: {
+    regular: '400',
+    bold: '700',
+  },
+  size: {
+    xs: 12,
+    sm: 14,
+    base: 16,
+    lg: 18,
+    xl: 20,
+    '2xl': 24,
+    '3xl': 30,
+    '4xl': 36,
+    '5xl': 48,
+    '6xl': 60,
+    '7xl': 72,
+    '8xl': 96,
+    '9xl': 128,
+  },
+};
+
+export const fontText =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+<div>
+  <Unstyled>
+    <div className="flex flex-col gap-3.5">
+      <p className="text-xs mt-10">text-xs: Extra small</p>
+      <p className="text-sm">text-sm: Small</p>
+      <p className="text-base">text-base: Default</p>
+      <p className="text-lg">text-lg: Large</p>
+      <p className="text-xl">text-xl: Extra Large</p>
+      <p className="text-2xl">text-2xl: Extra large 2</p>
+      <p className="text-3xl">text-3xl: Extra large 3</p>
+      <p className="text-4xl">text-4xl: Extra large 4</p>
+    </div>
+  </Unstyled>
+</div>
+
+<div>
+  #### Pixel scale:
+
+  <Typeset
+    fontSizes={[
+      Number(typography.size.xs),
+      Number(typography.size.sm),
+      Number(typography.size.base),
+      Number(typography.size.lg),
+      Number(typography.size.xl),
+      Number(typography.size['2xl']),
+      Number(typography.size['3xl']),
+      Number(typography.size['4xl']),
+    ]}
+    fontWeight={typography.weight.regular}
+    sampleText={fontText}
+    fontFamily={typography.family}
+  />
+
+</div>

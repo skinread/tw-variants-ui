@@ -1,0 +1,15 @@
+export interface {{pascalCase name}}Props {
+  /**
+   * Define your props here
+   */
+  exampleProp?: string;
+}
+
+/**
+ * describe the {{pascalCase name}} component here
+ */
+export const {{pascalCase name}} = (props: {{pascalCase name}}Props) => {
+  const { exampleProp, ...restProps } = props;
+
+  return <div>{{pascalCase name}} says {exampleProp}</div>;
+};

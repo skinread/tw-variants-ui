@@ -1,0 +1,89 @@
+import {
+  ColorItem,
+  ColorPalette,
+  Meta,
+  Typeset,
+  Unstyled,
+} from '@storybook/blocks';
+
+<Meta title="Design Tokens" />
+
+# Design Tokens
+
+These tokens reflect what is configured in code and are a _work in progress_,
+they do not yet reflect all design decisions nor the final naming convention.
+
+### Theme overview
+
+Themes should be comprised of semantic colours, that is a colour labelled with a purposeful name rather than the colour itself.
+There are many different categorisations and naming conventions for semantic colours based on what the brand(s) require, colour modes, etc.
+
+Alternatively, palette colours are static values with a label that references the shade itself, such as _Blue 600_ or `blue.600` and would always be the same regardless of the theme.
+
+A few semantic naming pattern examples include:
+
+- **interaction** main / focus / hover / pressed
+- **inverse** background / foreground
+- **neutral** 100 / 200 / 300 / etc
+
+## Colours
+
+<section data-theme="custom" style={{ background: 'inherit' }}>
+  <ColorPalette>
+    <ColorItem
+      title="Content"
+      subtitle="background + foreground shades"
+      colors={{
+        background: 'hsl(var(--vui-color-background))',
+        foreground: 'hsl(var(--vui-color-foreground))',
+      }}
+    />
+    <ColorItem
+      colors={{
+        subtle: 'hsl(var(--vui-color-subtle))',
+        link: 'hsl(var(--vui-color-link))',
+      }}
+    />
+    <ColorItem
+      colors={{
+        neutral: 'hsl(var(--vui-color-neutral))',
+        'neutral-focus': 'hsl(var(--vui-color-neutral-focus))',
+        'neutral-content': 'hsl(var(--vui-color-neutral-content))',
+      }}
+    />
+    <ColorItem
+      title="Primary"
+      subtitle="main brand colour"
+      colors={{
+        primary: 'hsl(var(--vui-color-primary))',
+        'primary-focus': 'hsl(var(--vui-color-primary-focus))',
+        'primary-content': 'hsl(var(--vui-color-primary-content))',
+      }}
+    />
+    <ColorItem
+      title="Secondary"
+      subtitle="a complimentary brand colour"
+      colors={{ secondary: 'hsl(var(--vui-color-secondary))' }}
+    />
+    <ColorItem
+      title="Accent"
+      subtitle="decorative colour"
+      colors={{ accent: 'hsl(var(--vui-color-accent))' }}
+    />
+    <ColorItem
+      title="Feedback"
+      subtitle="enhances the user context"
+      colors={{
+        info: 'hsl(var(--vui-color-info))',
+        success: 'hsl(var(--vui-color-success))',
+        error: 'hsl(var(--vui-color-error))',
+      }}
+    />
+    <ColorItem
+      colors={{
+        warning: 'hsl(var(--vui-color-warning))',
+        'warning-content': 'hsl(var(--vui-color-warning-content))',
+      }}
+    />
+  </ColorPalette>
+</section>
