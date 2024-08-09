@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`React/Button Link External smoke-test 1`] = `
-<a class="btn no-animation text-base h-auto min-h-fit px-2 py-2 btn-outline text-primary border-primary hover:bg-primary/10 hover:border-primary hover:text-primary focus:bg-primary/10 active:bg-primary/30 disabled:opacity-40 disabled:border-primary disabled:text-primary disabled:bg-white btn-block"
+<a class="btn text-base h-auto min-h-fit px-2 py-2 active:bg-primary/30 disabled:opacity-40 disabled:border-primary disabled:text-primary disabled:bg-white btn-block"
    rel="noopener noreferrer"
    target="_blank"
    href="https://github.com/skinread/"
@@ -25,7 +25,7 @@ exports[`React/Button Link External smoke-test 1`] = `
 `;
 
 exports[`React/Button Link InteractonTest play-test 1`] = `
-<a class="btn no-animation text-base h-auto min-h-fit px-2 py-2 btn-primary focus:bg-primary-focus focus:border-primary-focus hover:bg-primary-focus disabled:opacity-40 disabled:bg-primary disabled:text-white"
+<a class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white"
    href="#"
 >
   Go there
@@ -33,7 +33,7 @@ exports[`React/Button Link InteractonTest play-test 1`] = `
 `;
 
 exports[`React/Button Link Polymorphic smoke-test 1`] = `
-<span class="btn no-animation text-base h-auto min-h-fit px-2 py-2 btn-primary focus:bg-primary-focus focus:border-primary-focus hover:bg-primary-focus disabled:opacity-40 disabled:bg-primary disabled:text-white"
+<span class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white"
       href="#"
 >
   Go there
@@ -41,7 +41,7 @@ exports[`React/Button Link Polymorphic smoke-test 1`] = `
 `;
 
 exports[`React/Button Link Primary smoke-test 1`] = `
-<a class="btn no-animation text-base h-auto min-h-fit px-2 py-2 btn-primary focus:bg-primary-focus focus:border-primary-focus hover:bg-primary-focus disabled:opacity-40 disabled:bg-primary disabled:text-white"
+<a class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white"
    href="#"
 >
   Go there
