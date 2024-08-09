@@ -101,6 +101,57 @@ exports[`React/Select DefaultValue smoke-test 1`] = `
 </div>
 `;
 
+exports[`React/Select InteractionTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="select-box-interaction-test"
+  >
+    <span class="label-text text-base font-bold">
+      Favourite fruit
+    </span>
+  </label>
+  <select id="select-box-interaction-test"
+          class="placeholder:text-subtle select select-primary text-base min-h-fit rounded-[--rounded-field] [&amp;:has(option[disabled]:default:checked)]:text-subtle h-[42px] px-3"
+          name="interaction-test"
+  >
+    <option value
+            disabled
+            class="text-red-700"
+            selected
+    >
+      Choose a fruit
+    </option>
+    <option value="a">
+      Apple
+    </option>
+    <option value="b">
+      Banana
+    </option>
+    <option value="c">
+      Cherries
+    </option>
+    <option value="d">
+      Dragon Fruit
+    </option>
+    <option value="g">
+      Grapefruit
+    </option>
+    <option value="k">
+      Kiwi
+    </option>
+    <option value="m">
+      Mango
+    </option>
+    <option value="o">
+      Orange
+    </option>
+    <option value="r">
+      Raspberries
+    </option>
+  </select>
+</div>
+`;
+
 exports[`React/Select Invalid smoke-test 1`] = `
 <div class="form-control">
   <label class="label items-start px-0"

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, fn, userEvent, within } from '@storybook/test';
 
 import { Select } from './Select';
 
@@ -22,11 +22,7 @@ const meta = {
     ],
     name: 'demo-select-box',
     placeholder: 'Choose a fruit',
-  },
-  argTypes: {
-    onChange: {
-      action: 'changed',
-    },
+    onChange: fn(),
   },
 } satisfies Meta<typeof Select>;
 

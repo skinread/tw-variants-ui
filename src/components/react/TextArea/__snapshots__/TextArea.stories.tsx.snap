@@ -17,3 +17,21 @@ exports[`React/Text Area Basic smoke-test 1`] = `
   </textarea>
 </div>
 `;
+
+exports[`React/Text Area InteractionTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="text-area-interaction-test"
+  >
+    <span class="label-text text-base font-bold">
+      Tell me a story
+    </span>
+  </label>
+  <textarea id="text-area-interaction-test"
+            class="placeholder:text-subtle textarea textarea-primary text-base rounded-[--rounded-field]"
+            name="interaction-test"
+            placeholder="Once upon a time..."
+  >
+  </textarea>
+</div>
+`;

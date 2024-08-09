@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, fn, userEvent, within } from '@storybook/test';
 
 import { Checkbox } from './Checkbox';
 
@@ -12,11 +12,7 @@ const meta = {
     name: 'demo-checkbox',
     checked: undefined,
     hasError: undefined,
-  },
-  argTypes: {
-    onChange: {
-      action: 'changed',
-    },
+    onChange: fn(),
   },
 } satisfies Meta<typeof Checkbox>;
 

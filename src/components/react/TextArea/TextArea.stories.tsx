@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within, userEvent } from '@storybook/test';
+import { expect, fn, within, userEvent } from '@storybook/test';
 
 import { TextArea } from './TextArea';
 
@@ -11,11 +11,9 @@ const meta = {
     label: 'Tell me a story',
     name: 'demo-textarea-field',
     placeholder: 'Once upon a time...',
-  },
-  argTypes: {
-    onChange: { action: 'change' },
-    onFocus: { action: 'focus' },
-    onBlur: { action: 'blur' },
+    onBlur: fn(),
+    onChange: fn(),
+    onFocus: fn(),
   },
 } satisfies Meta<typeof TextArea>;
 

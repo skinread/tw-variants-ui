@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, fn, userEvent, within } from '@storybook/test';
 
 import { RadioButtons } from './RadioButtons';
 
@@ -24,11 +24,7 @@ const meta = {
     ],
     name: 'demo-radio-buttons',
     hasError: undefined,
-  },
-  argTypes: {
-    onChange: {
-      action: 'changed',
-    },
+    onChange: fn(),
   },
 } satisfies Meta<typeof RadioButtons>;
 

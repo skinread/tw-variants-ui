@@ -33,6 +33,27 @@ exports[`React/Checkbox ControlledChecked smoke-test 1`] = `
 </div>
 `;
 
+exports[`React/Checkbox InteractionTest play-test 1`] = `
+<div class="form-control block my-4">
+  <div class="flex">
+    <label class="label items-start px-0 py-0 cursor-pointer">
+      <input type="checkbox"
+             class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+             name="demo-label-link-checkbox"
+      >
+      <span class="label-text text-base ml-2.5">
+        Yes I agree to the
+        <a href="#link"
+           class="link"
+        >
+          terms and conditions
+        </a>
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`React/Checkbox Invalid smoke-test 1`] = `
 <div class="form-control block my-4">
   <div class="flex">
