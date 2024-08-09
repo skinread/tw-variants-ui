@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React/Input Field AdditionalContent smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-text-info-field"
+  >
+    <span class="label-text text-base font-bold">
+      Enter text
+    </span>
+    <span>
+      <button aria-label="this is a simple tooltip example but any interactivity can be used">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewbox="0 0 24 24"
+             fill="currentColor"
+             class="inline-block  fill-foreground icon-info"
+             width="16"
+             aria-hidden="true"
+        >
+          <path d="M12,24A12,12,0,1,1,24,12,12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z"
+                stroke="none"
+          >
+          </path>
+          <path d="M14,19H12V12H10V10h2a2,2,0,0,1,2,2Z"
+                stroke="none"
+          >
+          </path>
+          <circle cx="12"
+                  cy="6.5"
+                  r="1.5"
+          >
+          </circle>
+        </svg>
+      </button>
+      <dialog class="modal items-end sm:items-center"
+              id="info-modal"
+      >
+        <div class="modal-box flex flex-col rounded-md p-8 pt-6 w-full max-w-none sm:max-w-xl overflow-hidden">
+          <form method="dialog"
+                class="flex justify-end"
+          >
+            <button class="btn btn-xs btn-square btn-ghost"
+                    aria-label="close modal"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   viewbox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   class="inline-block  stroke-foreground icon-cross"
+                   width="16"
+                   aria-hidden="true"
+              >
+                <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"
+                      stroke="none"
+                >
+                </path>
+              </svg>
+            </button>
+          </form>
+          <div class="mt-4 overflow-y-auto">
+            <h2 class="font-semibold text-2xl mb-8">
+              Additional information
+            </h2>
+            <p>
+              The informative modal content appears here.
+            </p>
+            <p>
+              Press ESC key or click outside to close
+            </p>
+          </div>
+        </div>
+        <form method="dialog"
+              class="modal-backdrop"
+              aria-hidden="true"
+        >
+          <button class="cursor-default"
+                  tabindex="-1"
+          >
+          </button>
+        </form>
+      </dialog>
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-demo-text-info-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           aria-labelledby="input-field-demo-text-info-field-feedback"
+           aria-describedby="input-field-demo-text-info-field-description"
+           name="demo-text-info-field"
+           placeholder="Type in here"
+    >
+  </div>
+  <label class="block leading-5 mt-2 [&amp;>label]:mt-0"
+         id="input-field-demo-text-info-field-feedback"
+  >
+    Optional useful context content here
+  </label>
+  <div class="mt-3"
+       id="input-field-demo-text-info-field-description"
+  >
+    <p class="text-subtle">
+      Additional content that helps the user to understand the field and how to correctly populate information, provide examples and etc.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`React/Input Field Color smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-color-field"
+  >
+    <span class="label-text text-base font-bold">
+      Select a colour
+    </span>
+  </label>
+  <div class="flex">
+    <input type="color"
+           id="input-field-demo-color-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           name="demo-color-field"
+           placeholder="Type in here"
+    >
+  </div>
+</div>
+`;
+
+exports[`React/Input Field ControlledInput smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-text-field-controlled"
+  >
+    <span class="label-text text-base font-bold">
+      Enter text
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-demo-text-field-controlled"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           aria-labelledby="input-field-demo-text-field-controlled-feedback"
+           name="demo-text-field-controlled"
+           placeholder="Type in here"
+           value="can't type here"
+    >
+  </div>
+  <label class="block leading-5 mt-2 [&amp;>label]:mt-0"
+         id="input-field-demo-text-field-controlled-feedback"
+  >
+    Optional useful context content here
+  </label>
+</div>
+`;
+
+exports[`React/Input Field Date smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-date-field"
+  >
+    <span class="label-text text-base font-bold">
+      Choose a date
+    </span>
+  </label>
+  <div class="flex">
+    <input type="date"
+           id="input-field-demo-date-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           name="demo-date-field"
+           placeholder="Type in here"
+           autocomplete="bday"
+    >
+  </div>
+</div>
+`;
+
+exports[`React/Input Field Email smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-email-field"
+  >
+    <span class="label-text text-base font-bold">
+      Email address
+    </span>
+  </label>
+  <div class="flex">
+    <input type="email"
+           id="input-field-demo-email-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           name="demo-email-field"
+           placeholder="name@server.com"
+           inputmode="email"
+           autocomplete="email"
+    >
+  </div>
+</div>
+`;
+
+exports[`React/Input Field FeedbackContentTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-feedback-content-test"
+  >
+    <span class="label-text text-base font-bold">
+      label text
+    </span>
+    <span>
+      <i>
+        info content
+      </i>
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-feedback-content-test"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] border-2 h-[42px] px-3 input-error w-full"
+           aria-labelledby="input-field-feedback-content-test-feedback"
+           aria-describedby="input-field-feedback-content-test-description"
+           name="feedback-content-test"
+           placeholder="Type in here"
+    >
+  </div>
+  <label class="leading-5 mt-2 [&amp;>label]:mt-0 text-error fill-error flex"
+         id="input-field-feedback-content-test-feedback"
+  >
+    <div class="-mt-0.5">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 24 24"
+           fill="currentColor"
+           class="inline-block  w-6 h-6 mr-1.5 mb-0.5 icon-exclamation"
+           aria-hidden="true"
+      >
+        <path d="m22.242,5.272l-3.515-3.515c-1.133-1.133-2.64-1.757-4.242-1.757h-4.971c-1.603,0-3.109.624-4.242,1.757l-3.515,3.514c-1.134,1.133-1.758,2.64-1.758,4.243v4.971c0,1.603.624,3.11,1.758,4.243l3.515,3.515c1.133,1.133,2.64,1.757,4.242,1.757h4.971c1.603,0,3.109-.624,4.242-1.757l3.515-3.514c1.134-1.133,1.758-2.64,1.758-4.243v-4.971c0-1.603-.624-3.11-1.758-4.243Zm-.242,9.213c0,1.069-.416,2.073-1.172,2.829l-3.515,3.515c-.756.755-1.76,1.171-2.828,1.171h-4.971c-1.068,0-2.072-.416-2.828-1.171l-3.515-3.515c-.756-.755-1.172-1.759-1.172-2.828v-4.971c0-1.069.416-2.073,1.172-2.829l3.515-3.515c.756-.755,1.76-1.171,2.828-1.171h4.971c1.068,0,2.072.416,2.828,1.171l3.515,3.515c.756.755,1.172,1.759,1.172,2.828v4.971Zm-11-.485V6c0-.552.447-1,1-1s1,.448,1,1v8c0,.552-.447,1-1,1s-1-.448-1-1Zm2.5,3.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Z"
+              stroke="none"
+        >
+        </path>
+      </svg>
+    </div>
+    feedback content
+  </label>
+  <div class="mt-3"
+       id="input-field-feedback-content-test-description"
+  >
+    <p>
+      description content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`React/Input Field InteractionTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-interaction-test"
+  >
+    <span class="label-text text-base font-bold">
+      Enter text
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-interaction-test"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           name="interaction-test"
+           placeholder="Type in here"
+    >
+  </div>
+</div>
+`;
+
+exports[`React/Input Field InvalidText smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-invalid-text-field"
+  >
+    <span class="label-text text-base font-bold">
+      Enter text
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-demo-invalid-text-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] border-2 h-[42px] px-3 input-error w-full"
+           aria-labelledby="input-field-demo-invalid-text-field-feedback"
+           name="demo-invalid-text-field"
+           placeholder="Type in here"
+    >
+  </div>
+  <label class="leading-5 mt-2 [&amp;>label]:mt-0 text-error fill-error flex"
+         id="input-field-demo-invalid-text-field-feedback"
+  >
+    <div class="-mt-0.5">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 24 24"
+           fill="currentColor"
+           class="inline-block  w-6 h-6 mr-1.5 mb-0.5 icon-exclamation"
+           aria-hidden="true"
+      >
+        <path d="m22.242,5.272l-3.515-3.515c-1.133-1.133-2.64-1.757-4.242-1.757h-4.971c-1.603,0-3.109.624-4.242,1.757l-3.515,3.514c-1.134,1.133-1.758,2.64-1.758,4.243v4.971c0,1.603.624,3.11,1.758,4.243l3.515,3.515c1.133,1.133,2.64,1.757,4.242,1.757h4.971c1.603,0,3.109-.624,4.242-1.757l3.515-3.514c1.134-1.133,1.758-2.64,1.758-4.243v-4.971c0-1.603-.624-3.11-1.758-4.243Zm-.242,9.213c0,1.069-.416,2.073-1.172,2.829l-3.515,3.515c-.756.755-1.76,1.171-2.828,1.171h-4.971c-1.068,0-2.072-.416-2.828-1.171l-3.515-3.515c-.756-.755-1.172-1.759-1.172-2.828v-4.971c0-1.069.416-2.073,1.172-2.829l3.515-3.515c.756-.755,1.76-1.171,2.828-1.171h4.971c1.068,0,2.072.416,2.828,1.171l3.515,3.515c.756.755,1.172,1.759,1.172,2.828v4.971Zm-11-.485V6c0-.552.447-1,1-1s1,.448,1,1v8c0,.552-.447,1-1,1s-1-.448-1-1Zm2.5,3.5c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Z"
+              stroke="none"
+        >
+        </path>
+      </svg>
+    </div>
+    Helpful error message content here
+  </label>
+</div>
+`;
+
+exports[`React/Input Field Number smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-number-field"
+  >
+    <span class="label-text text-base font-bold">
+      Add a number
+    </span>
+  </label>
+  <div class="flex">
+    <input type="number"
+           id="input-field-demo-number-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           name="demo-number-field"
+           placeholder="Type in here"
+           inputmode="numeric"
+    >
+  </div>
+</div>
+`;
+
+exports[`React/Input Field Password smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-password-field"
+  >
+    <span class="label-text text-base font-bold">
+      Password
+    </span>
+  </label>
+  <div class="flex">
+    <input type="password"
+           id="input-field-demo-password-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 pr-12 w-full"
+           name="demo-password-field"
+           placeholder="Type in here"
+           autocomplete="current-password"
+           autocorrect="off"
+           spellcheck="false"
+    >
+    <button class="-ml-11"
+            aria-label="show password"
+            type="button"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 24 24"
+           fill="currentColor"
+           stroke="currentColor"
+           class="inline-block   icon-eye-crossed"
+           width="28"
+           aria-hidden="true"
+      >
+        <path d="M23.821,11.181v0a15.736,15.736,0,0,0-4.145-5.44l3.032-3.032L21.293,1.293,18,4.583A11.783,11.783,0,0,0,12,3C4.5,3,1.057,9.261.179,11.181a1.969,1.969,0,0,0,0,1.64,15.736,15.736,0,0,0,4.145,5.44L1.293,21.293l1.414,1.414L6,19.417A11.783,11.783,0,0,0,12,21c7.5,0,10.943-6.261,11.821-8.181A1.968,1.968,0,0,0,23.821,11.181ZM2,12.011C2.75,10.366,5.693,5,12,5a9.847,9.847,0,0,1,4.518,1.068L14.753,7.833a4.992,4.992,0,0,0-6.92,6.92L5.754,16.832A13.647,13.647,0,0,1,2,12.011ZM15,12a3,3,0,0,1-3,3,2.951,2.951,0,0,1-1.285-.3L14.7,10.715A2.951,2.951,0,0,1,15,12ZM9,12a3,3,0,0,1,3-3,2.951,2.951,0,0,1,1.285.3L9.3,13.285A2.951,2.951,0,0,1,9,12Zm3,7a9.847,9.847,0,0,1-4.518-1.068l1.765-1.765a4.992,4.992,0,0,0,6.92-6.92l2.078-2.078A13.584,13.584,0,0,1,22,12C21.236,13.657,18.292,19,12,19Z"
+              stroke="none"
+        >
+        </path>
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`React/Input Field PasswordToggleTest play-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-test-password-toggle"
+  >
+    <span class="label-text text-base font-bold">
+      Password test
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-test-password-toggle"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 pr-12 w-full"
+           name="test-password-toggle"
+           placeholder="Type in here"
+    >
+    <button class="-ml-11"
+            aria-label="hide password"
+            type="button"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 24 24"
+           fill="currentColor"
+           stroke="currentColor"
+           class="inline-block   icon-eye"
+           width="28"
+           aria-hidden="true"
+      >
+        <path d="M23.821,11.181v0C22.943,9.261,19.5,3,12,3S1.057,9.261.179,11.181a1.969,1.969,0,0,0,0,1.64C1.057,14.739,4.5,21,12,21s10.943-6.261,11.821-8.181A1.968,1.968,0,0,0,23.821,11.181ZM12,19c-6.307,0-9.25-5.366-10-6.989C2.75,10.366,5.693,5,12,5c6.292,0,9.236,5.343,10,7C21.236,13.657,18.292,19,12,19Z"
+              stroke="none"
+        >
+        </path>
+        <path d="M12,7a5,5,0,1,0,5,5A5.006,5.006,0,0,0,12,7Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,12,15Z"
+              stroke="none"
+        >
+        </path>
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`React/Input Field Telephone smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-tel-field"
+  >
+    <span class="label-text text-base font-bold">
+      Phone number
+    </span>
+  </label>
+  <div class="flex">
+    <input type="tel"
+           id="input-field-demo-tel-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           name="demo-tel-field"
+           placeholder="Type in here"
+           inputmode="tel"
+           autocomplete="tel"
+    >
+  </div>
+</div>
+`;
+
+exports[`React/Input Field Text smoke-test 1`] = `
+<div class="form-control">
+  <label class="label items-start px-0"
+         for="input-field-demo-text-field"
+  >
+    <span class="label-text text-base font-bold">
+      Enter text
+    </span>
+  </label>
+  <div class="flex">
+    <input type="text"
+           id="input-field-demo-text-field"
+           class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
+           aria-labelledby="input-field-demo-text-field-feedback"
+           name="demo-text-field"
+           placeholder="Type in here"
+    >
+  </div>
+  <label class="block leading-5 mt-2 [&amp;>label]:mt-0"
+         id="input-field-demo-text-field-feedback"
+  >
+    Optional useful context content here
+  </label>
+</div>
+`;
