@@ -2,11 +2,63 @@
 
 exports[`React/Modal Basic smoke-test 1`] = `
 <div>
-  <button class="btn no-animation text-base h-auto min-h-fit px-2 py-2 btn-primary focus:bg-primary-focus focus:border-primary-focus hover:bg-primary-focus disabled:opacity-40 disabled:bg-primary disabled:text-white">
+  <button class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white">
     Open demo
   </button>
   <dialog class="modal items-end sm:items-center"
           id="modal-demo-basic"
+  >
+    <div class="modal-box flex flex-col rounded-md p-8 pt-6 w-full max-w-none sm:max-w-xl overflow-hidden">
+      <form method="dialog"
+            class="flex justify-end"
+      >
+        <button class="btn btn-xs btn-square btn-ghost"
+                aria-label="close modal"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewbox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               class="inline-block  stroke-foreground icon-cross"
+               width="16"
+               aria-hidden="true"
+          >
+            <path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"
+                  stroke="none"
+            >
+            </path>
+          </svg>
+        </button>
+      </form>
+      <div class="mt-4 overflow-y-auto">
+        <h2 class="font-semibold text-2xl mb-8">
+          Modal title
+        </h2>
+        <p>
+          Press ESC key or click outside to close
+        </p>
+      </div>
+    </div>
+    <form method="dialog"
+          class="modal-backdrop"
+          aria-hidden="true"
+    >
+      <button class="cursor-default"
+              tabindex="-1"
+      >
+      </button>
+    </form>
+  </dialog>
+</div>
+`;
+
+exports[`React/Modal InteractionTest play-test 1`] = `
+<div>
+  <button class="btn text-base h-auto min-h-fit px-2 py-2 btn-primary disabled:opacity-40 disabled:bg-primary disabled:text-white">
+    Modal trigger
+  </button>
+  <dialog class="modal items-end sm:items-center"
+          id="interaction-test"
   >
     <div class="modal-box flex flex-col rounded-md p-8 pt-6 w-full max-w-none sm:max-w-xl overflow-hidden">
       <form method="dialog"
