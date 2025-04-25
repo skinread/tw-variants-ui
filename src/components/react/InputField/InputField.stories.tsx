@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { expect, fn, within, userEvent } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, within, userEvent } from 'storybook/test';
 
 import { InputField } from './InputField';
 import { Icon } from '../Icon/Icon';
