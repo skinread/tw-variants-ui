@@ -64,10 +64,10 @@ export const InteractionTest: Story = {
     await step('Keyboard interaction', async () => {
       await userEvent.keyboard('[ArrowLeft]');
       await expect(args.onChange).toHaveBeenCalled();
-      await expect(inputs[0]).toBeChecked();
+      await expect(inputs[1]).toBeChecked();
       await userEvent.keyboard('[ArrowLeft]');
       await expect(args.onChange).toHaveBeenCalled();
-      await expect(inputs[1]).toBeChecked();
+      await expect(inputs[0]).toBeChecked();
     });
   },
 };

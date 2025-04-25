@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, fn, userEvent, within } from 'storybook/test';
 
 import { Autocomplete, type Option } from './Autocomplete';
 
@@ -46,6 +46,9 @@ const meta = {
   title: 'React/Autocomplete',
   component: Autocomplete,
   tags: ['autodocs'],
+  args: {
+    onChangeValue: fn(),
+  },
 } satisfies Meta<typeof Autocomplete>;
 
 export default meta;
@@ -83,6 +86,8 @@ export const InteractionTest: Story = {
   play: async ({ args, canvasElement, step }) => {
     const canvas = within(canvasElement);
     const input = canvas.getByLabelText<HTMLInputElement>(args.label, { selector: 'input' });
+    // Randomise option selection
+    const randomIndex = () => Math.floor(Math.random() * args.options.length);
 
     async function doSelectOption(input: HTMLInputElement, option: Option) {
       const { label, value } = option;
@@ -91,7 +96,7 @@ export const InteractionTest: Story = {
       await expect(input).toHaveValue(label);
     }
 
-    let option = args.options[1];
+    let option = args.options[randomIndex()];
     await step(`Select ${option?.label}`, async () => {
       await doSelectOption(input, option!);
     });
@@ -101,7 +106,7 @@ export const InteractionTest: Story = {
       await expect(input).toHaveValue('');
     });
 
-    option = args.options[0];
+    option = args.options[randomIndex()];
     await step(`Select ${option?.label}`, async () => {
       await doSelectOption(input, option!);
     });
