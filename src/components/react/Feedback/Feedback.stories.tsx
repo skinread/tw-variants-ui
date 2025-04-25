@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Feedback } from './Feedback';
 
@@ -20,12 +20,28 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Error: Story = {};
-
 export const Success: Story = {
   args: {
     children: 'Your update has been saved.',
     color: 'success',
     iconName: 'tick-circle',
+  },
+};
+
+export const Info: Story = {
+  args: {
+    children: 'Take notice of these details',
+    color: 'info',
+    iconName: 'info',
+  },
+};
+
+export const Error: Story = {};
+
+export const Warning: Story = {
+  args: {
+    children: 'Take heed of this message, it has consequences',
+    color: 'warning',
+    iconName: 'info',
   },
 };

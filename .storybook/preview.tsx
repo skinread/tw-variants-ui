@@ -1,6 +1,6 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { lightStorybook, darkStorybook } from './storybook-theme';
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 
 // inject the Tailwind styling
 import '../src/styles/tailwind.css';

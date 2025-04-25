@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, within } from 'storybook/test';
 
 import { RadioButtons } from './RadioButtons';
 
@@ -64,10 +64,10 @@ export const InteractionTest: Story = {
     await step('Keyboard interaction', async () => {
       await userEvent.keyboard('[ArrowLeft]');
       await expect(args.onChange).toHaveBeenCalled();
-      await expect(inputs[0]).toBeChecked();
+      await expect(inputs[1]).toBeChecked();
       await userEvent.keyboard('[ArrowLeft]');
       await expect(args.onChange).toHaveBeenCalled();
-      await expect(inputs[1]).toBeChecked();
+      await expect(inputs[0]).toBeChecked();
     });
   },
 };

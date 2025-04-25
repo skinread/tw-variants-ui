@@ -8,7 +8,7 @@ exports[`React/Checkbox Basic smoke-test 1`] = `
              class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
              name="demo-checkbox"
       >
-      <span class="label-text text-base ml-2.5">
+      <span class="label-text text-base pt-[3px] ml-2.5">
         Yes I agree
       </span>
     </label>
@@ -25,7 +25,7 @@ exports[`React/Checkbox ControlledChecked smoke-test 1`] = `
              name="demo-controlled-checkbox"
              checked
       >
-      <span class="label-text text-base ml-2.5">
+      <span class="label-text text-base pt-[3px] ml-2.5">
         Can't click me. Toggle me in React using the "checked" prop
       </span>
     </label>
@@ -41,7 +41,7 @@ exports[`React/Checkbox InteractionTest play-test 1`] = `
              class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
              name="demo-label-link-checkbox"
       >
-      <span class="label-text text-base ml-2.5">
+      <span class="label-text text-base pt-[3px] ml-2.5">
         Yes I agree to the
         <a href="#link"
            class="link"
@@ -62,7 +62,7 @@ exports[`React/Checkbox Invalid smoke-test 1`] = `
              class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] border-2 bg-white checkbox-error"
              name="demo-checkbox-invalid"
       >
-      <span class="label-text text-base ml-2.5">
+      <span class="label-text text-base pt-[3px] ml-2.5">
         Yes I agree to the
         <a href="#link"
            class="link"
@@ -101,7 +101,7 @@ exports[`React/Checkbox LabelWithLink smoke-test 1`] = `
              class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
              name="demo-label-link-checkbox"
       >
-      <span class="label-text text-base ml-2.5">
+      <span class="label-text text-base pt-[3px] ml-2.5">
         Yes I agree to the
         <a href="#link"
            class="link"
