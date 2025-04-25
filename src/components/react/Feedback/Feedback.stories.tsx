@@ -20,12 +20,24 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Error: Story = {};
-
 export const Success: Story = {
   args: {
     children: 'Your update has been saved.',
     color: 'success',
     iconName: 'tick-circle',
+  },
+};
+
+export const Info: Story = {
+  args: {
+    color: 'info',
+  },
+};
+
+export const Error: Story = {};
+
+export const Warning: Story = {
+  args: {
+    color: 'warning',
   },
 };

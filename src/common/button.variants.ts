@@ -9,8 +9,8 @@ export const buttonVariants = tv({
     color: {
       primary: ['btn-primary', 'disabled:opacity-40 disabled:bg-primary disabled:text-white'],
       secondary: [
-        'active:bg-primary/30',
-        'disabled:opacity-40 disabled:border-primary disabled:text-primary disabled:bg-white',
+        'bg-secondary active:bg-secondary-focus',
+        'disabled:opacity-40 disabled:border-secondary disabled:text-secondary disabled:bg-white',
       ],
     },
     fullWidth: {

@@ -19,6 +19,7 @@ export const inputVariants = tv({
       checkbox: {
         wrapper: 'block my-4',
         label: 'py-0',
+        labelText: 'pt-[3px]',
         input:
           'checkbox checkbox-primary rounded-md w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field]',
         feedback: 'block mt-1',

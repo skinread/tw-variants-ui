@@ -4,8 +4,25 @@
 const semanticColours = {
   background: '#ffffff',
   foreground: '#222222',
-  subtle: '#4a4a4a',
-  link: '#0046fa',
+  subtle: '#195332',
+  link: '#2A8C54',
+
+  neutral: '#9AF5C1',
+  'neutral-focus': '#3BC576',
+  'neutral-content': '#222222',
+
+  primary: '#43E187',
+  'primary-focus': '#2A8C54',
+  'primary-content': '#222222',
+
+  secondary: '#C8FADD',
+
+  accent: '#6CF1A5',
+
+  info: '#234e9c',
+  success: '#32A865',
+  warning: '#ff9900',
+  error: '#712314',
   'warning-content': '#ffffff',
   'focus-ring': '#153ff9',
 };
@@ -19,9 +36,9 @@ const colors = {
 
 export const customVars = {
   // _____ CUSTOM VARIABLES ______
-  '--rounded-field': '4px',
-  '--vui-radio-size': '1.25rem',
-  '--vui-checkbox-size': '1.3rem',
+  '--rounded-field': '10px',
+  '--vui-radio-size': '1.75rem',
+  '--vui-checkbox-size': '1.75rem',
 };
 
 /**
@@ -30,7 +47,7 @@ export const customVars = {
 const config = {
   ...semanticColours,
   // '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
-  '--rounded-btn': '6px', // border radius rounded-btn utility class, used in buttons and similar element
+  '--rounded-btn': '10px', // border radius rounded-btn utility class, used in buttons and similar element
   // '--rounded-badge': '1.9rem', // border radius rounded-badge utility class, used in badges and similar
   // '--animation-btn': '0.25s', // duration of animation when you click on button
   // '--animation-input': '0.2s', // duration of animation for inputs like checkbox, toggle, radio, etc
