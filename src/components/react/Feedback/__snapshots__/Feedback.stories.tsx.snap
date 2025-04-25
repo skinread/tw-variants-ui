@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`React/Feedback Error smoke-test 1`] = `
-<div class="alert p-4 border-0 border-l-[6px] rounded-md alert-error bg-red-light-3 border-error">
+<div class="alert p-4 border-0 border-l-[6px] rounded-md alert-error bg-error/15 border-error">
   <svg xmlns="http://www.w3.org/2000/svg"
        viewbox="0 0 24 24"
        fill="currentColor"
@@ -21,8 +21,38 @@ exports[`React/Feedback Error smoke-test 1`] = `
 </div>
 `;
 
+exports[`React/Feedback Info smoke-test 1`] = `
+<div class="alert p-4 border-0 border-l-[6px] rounded-md alert-info bg-info/20 border-info">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewbox="0 0 24 24"
+       fill="currentColor"
+       class="inline-block  w-8 h-8 fill-info icon-info"
+       aria-hidden="true"
+  >
+    <path d="M12,24A12,12,0,1,1,24,12,12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z"
+          stroke="none"
+    >
+    </path>
+    <path d="M14,19H12V12H10V10h2a2,2,0,0,1,2,2Z"
+          stroke="none"
+    >
+    </path>
+    <circle cx="12"
+            cy="6.5"
+            r="1.5"
+    >
+    </circle>
+  </svg>
+  <div class="text-foreground [overflow-wrap:anywhere] pt-1">
+    <p>
+      Take notice of these details
+    </p>
+  </div>
+</div>
+`;
+
 exports[`React/Feedback Success smoke-test 1`] = `
-<div class="alert p-4 border-0 border-l-[6px] rounded-md alert-success bg-green-light-3 border-success">
+<div class="alert p-4 border-0 border-l-[6px] rounded-md alert-success bg-success/20 border-success">
   <svg xmlns="http://www.w3.org/2000/svg"
        viewbox="0 0 24 24"
        fill="currentColor"
@@ -37,6 +67,36 @@ exports[`React/Feedback Success smoke-test 1`] = `
   <div class="text-foreground [overflow-wrap:anywhere] pt-1">
     <p>
       Your update has been saved.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`React/Feedback Warning smoke-test 1`] = `
+<div class="alert p-4 border-0 border-l-[6px] rounded-md alert-warning bg-warning/15 border-warning">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewbox="0 0 24 24"
+       fill="currentColor"
+       class="inline-block  w-8 h-8 fill-warning icon-info"
+       aria-hidden="true"
+  >
+    <path d="M12,24A12,12,0,1,1,24,12,12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z"
+          stroke="none"
+    >
+    </path>
+    <path d="M14,19H12V12H10V10h2a2,2,0,0,1,2,2Z"
+          stroke="none"
+    >
+    </path>
+    <circle cx="12"
+            cy="6.5"
+            r="1.5"
+    >
+    </circle>
+  </svg>
+  <div class="text-foreground [overflow-wrap:anywhere] pt-1">
+    <p>
+      Take heed of this message, it has consequences
     </p>
   </div>
 </div>

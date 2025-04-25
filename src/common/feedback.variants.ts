@@ -9,19 +9,19 @@ export const feedbackVariants = tv({
   variants: {
     color: {
       error: {
-        container: 'alert-error bg-red-light-3 border-error',
+        container: 'alert-error bg-error/15 border-error',
         icon: 'fill-error',
       },
       info: {
-        container: 'alert-info bg-blue-light-3 border-info',
+        container: 'alert-info bg-info/20 border-info',
         icon: 'fill-info',
       },
       success: {
-        container: 'alert-success bg-green-light-3 border-success',
+        container: 'alert-success bg-success/20 border-success',
         icon: 'fill-success',
       },
       warning: {
-        container: 'alert-warning bg-orange-light-3 border-warning',
+        container: 'alert-warning bg-warning/15 border-warning',
         icon: 'fill-warning',
       },
     },

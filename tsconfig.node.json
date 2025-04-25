@@ -7,11 +7,6 @@
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true
   },
-  "include": [
-    "vite.config.ts",
-    "tsup.config.ts"
-  ],
-  "exclude": [
-    "plopfile.js"
-  ]
+  "include": ["vite.config.ts", "tsup.config.ts"],
+  "exclude": ["plopfile.js"]
 }
