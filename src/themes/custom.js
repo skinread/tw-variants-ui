@@ -5,7 +5,7 @@ const semanticColours = {
   background: '#ffffff',
   foreground: '#222222',
   subtle: '#195332',
-  link: '#2A8C54',
+  link: '#32A865',
 
   neutral: '#9AF5C1',
   'neutral-focus': '#3BC576',
@@ -20,7 +20,7 @@ const semanticColours = {
   accent: '#6CF1A5',
 
   info: '#234e9c',
-  success: '#32A865',
+  success: '#2A8C54',
   warning: '#ff9900',
   error: '#712314',
   'warning-content': '#ffffff',

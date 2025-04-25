@@ -30,7 +30,9 @@ export const Success: Story = {
 
 export const Info: Story = {
   args: {
+    children: 'Take notice of these details',
     color: 'info',
+    iconName: 'info',
   },
 };
 
@@ -38,6 +40,8 @@ export const Error: Story = {};
 
 export const Warning: Story = {
   args: {
+    children: 'Take heed of this message, it has consequences',
     color: 'warning',
+    iconName: 'info',
   },
 };
