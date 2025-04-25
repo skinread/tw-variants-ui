@@ -4,8 +4,8 @@
 const semanticColours = {
   background: '#ffffff',
   foreground: '#222222',
-  subtle: '#195332',
-  link: '#32A865',
+  subtle: '#757575',
+  link: '#195332',
 
   neutral: '#9AF5C1',
   'neutral-focus': '#3BC576',
@@ -15,9 +15,9 @@ const semanticColours = {
   'primary-focus': '#2A8C54',
   'primary-content': '#222222',
 
-  secondary: '#C8FADD',
+  secondary: '#32A865',
 
-  accent: '#6CF1A5',
+  accent: '#6CF1A5', //#C8FADD
 
   info: '#234e9c',
   success: '#2A8C54',

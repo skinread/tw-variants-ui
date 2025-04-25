@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`React/Button Link External smoke-test 1`] = `
-<a class="btn text-base h-auto min-h-fit px-2 py-2 active:bg-primary/30 disabled:opacity-40 disabled:border-primary disabled:text-primary disabled:bg-white btn-block"
+<a class="btn text-base h-auto min-h-fit px-2 py-2 bg-secondary active:bg-secondary-focus disabled:opacity-40 disabled:border-secondary disabled:text-secondary disabled:bg-white btn-block"
    rel="noopener noreferrer"
    target="_blank"
    href="https://github.com/skinread/"
