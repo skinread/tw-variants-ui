@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`React/Autocomplete Fruit smoke-test 1`] = `
-<div class="form-control">
+<div class="form-control"
+     data-headlessui-state
+>
   <label class="label items-start px-0"
          for="autocomplete-demo-fruit-field"
-         id="headlessui-combobox-label-:r0:"
+         id="headlessui-label-«r2»"
          data-headlessui-state
   >
     <span class="label-text text-base font-bold">
@@ -13,16 +15,15 @@ exports[`React/Autocomplete Fruit smoke-test 1`] = `
   </label>
   <div class="relative">
     <input class="placeholder:text-subtle w-full input input-primary rounded-[--rounded-field] h-[42px] px-3"
-           name="demo-fruit-field"
            placeholder="Start typing"
            id="autocomplete-demo-fruit-field"
            role="combobox"
-           type="text"
            aria-expanded="false"
            aria-autocomplete="list"
            data-headlessui-state
-           value
-           aria-labelledby="headlessui-combobox-label-:r0:"
+           type="text"
+           name="demo-fruit-field"
+           aria-labelledby="headlessui-label-«r2»"
     >
   </div>
 </div>
@@ -30,10 +31,12 @@ exports[`React/Autocomplete Fruit smoke-test 1`] = `
 
 exports[`React/Autocomplete InteractionTest play-test 1`] = `
 <form>
-  <div class="form-control">
+  <div class="form-control"
+       data-headlessui-state
+  >
     <label class="label items-start px-0"
            for="autocomplete-demo-fruit-field"
-           id="headlessui-combobox-label-:r6:"
+           id="headlessui-label-«rg»"
            data-headlessui-state
     >
       <span class="label-text text-base font-bold">
@@ -42,16 +45,17 @@ exports[`React/Autocomplete InteractionTest play-test 1`] = `
     </label>
     <div class="relative">
       <input class="placeholder:text-subtle w-full input input-primary rounded-[--rounded-field] h-[42px] px-3"
-             name="demo-fruit-field"
              placeholder="Start typing"
              id="autocomplete-demo-fruit-field"
              role="combobox"
-             type="text"
              aria-expanded="false"
              aria-autocomplete="list"
-             data-headlessui-state
-             value
-             aria-labelledby="headlessui-combobox-label-:r6:"
+             data-headlessui-state="hover focus"
+             type="text"
+             name="demo-fruit-field"
+             aria-labelledby="headlessui-label-«rg»"
+             data-hover
+             data-focus
       >
     </div>
   </div>
@@ -59,10 +63,12 @@ exports[`React/Autocomplete InteractionTest play-test 1`] = `
 `;
 
 exports[`React/Autocomplete Invalid smoke-test 1`] = `
-<div class="form-control">
+<div class="form-control"
+     data-headlessui-state
+>
   <label class="label items-start px-0"
          for="autocomplete-demo-fruit-field"
-         id="headlessui-combobox-label-:r3:"
+         id="headlessui-label-«r9»"
          data-headlessui-state
   >
     <span class="label-text text-base font-bold">
@@ -71,16 +77,15 @@ exports[`React/Autocomplete Invalid smoke-test 1`] = `
   </label>
   <div class="relative">
     <input class="placeholder:text-subtle w-full input input-primary rounded-[--rounded-field] border-2 h-[42px] px-3 input-error"
-           name="demo-fruit-field"
            placeholder="Start typing"
            id="autocomplete-demo-fruit-field"
            role="combobox"
-           type="text"
            aria-expanded="false"
            aria-autocomplete="list"
            data-headlessui-state
-           value
-           aria-labelledby="headlessui-combobox-label-:r3:"
+           type="text"
+           name="demo-fruit-field"
+           aria-labelledby="headlessui-label-«r9»"
     >
   </div>
   <label class="leading-5 mt-2 [&amp;>label]:mt-0 text-error fill-error flex"

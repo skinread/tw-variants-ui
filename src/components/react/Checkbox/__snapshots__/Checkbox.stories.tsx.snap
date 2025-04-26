@@ -4,8 +4,8 @@ exports[`React/Checkbox Basic smoke-test 1`] = `
 <div class="form-control block my-4">
   <div class="flex">
     <label class="label items-start px-0 py-0 cursor-pointer">
-      <input type="checkbox"
-             class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+      <input class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+             type="checkbox"
              name="demo-checkbox"
       >
       <span class="label-text text-base pt-[3px] ml-2.5">
@@ -20,10 +20,10 @@ exports[`React/Checkbox ControlledChecked smoke-test 1`] = `
 <div class="form-control block my-4">
   <div class="flex">
     <label class="label items-start px-0 py-0 cursor-pointer">
-      <input type="checkbox"
-             class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
-             name="demo-controlled-checkbox"
+      <input class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+             type="checkbox"
              checked
+             name="demo-controlled-checkbox"
       >
       <span class="label-text text-base pt-[3px] ml-2.5">
         Can't click me. Toggle me in React using the "checked" prop
@@ -37,8 +37,8 @@ exports[`React/Checkbox InteractionTest play-test 1`] = `
 <div class="form-control block my-4">
   <div class="flex">
     <label class="label items-start px-0 py-0 cursor-pointer">
-      <input type="checkbox"
-             class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+      <input class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+             type="checkbox"
              name="demo-label-link-checkbox"
       >
       <span class="label-text text-base pt-[3px] ml-2.5">
@@ -58,8 +58,8 @@ exports[`React/Checkbox Invalid smoke-test 1`] = `
 <div class="form-control block my-4">
   <div class="flex">
     <label class="label items-start px-0 py-0 cursor-pointer">
-      <input type="checkbox"
-             class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] border-2 bg-white checkbox-error"
+      <input class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] border-2 bg-white checkbox-error"
+             type="checkbox"
              name="demo-checkbox-invalid"
       >
       <span class="label-text text-base pt-[3px] ml-2.5">
@@ -97,8 +97,8 @@ exports[`React/Checkbox LabelWithLink smoke-test 1`] = `
 <div class="form-control block my-4">
   <div class="flex">
     <label class="label items-start px-0 py-0 cursor-pointer">
-      <input type="checkbox"
-             class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+      <input class="placeholder:text-subtle checkbox checkbox-primary w-[--vui-checkbox-size] h-[--vui-checkbox-size] rounded-[--rounded-field] bg-white"
+             type="checkbox"
              name="demo-label-link-checkbox"
       >
       <span class="label-text text-base pt-[3px] ml-2.5">
