@@ -1,4 +1,4 @@
-import { createThemes } from 'tw-colors';
+import plugin from 'tailwindcss/plugin';
 import { themeAqua } from './aqua';
 import { themeCustom } from './custom';
 import { themeFantasy } from './fantasy';
@@ -18,21 +18,52 @@ export const defaultExtensions = {
   },
 };
 
+const themeMap = {
+  aqua: themeAqua.colors,
+  custom: themeCustom.colors,
+  fantasy: themeFantasy.colors,
+  garden: themeGarden.colors,
+  retro: themeRetro.colors,
+  synthwave: themeSynthwave.colors,
+};
+
+const options = {
+  produceCssVariable: (tokenName) => `--vui-color-${tokenName}`,
+};
+
+const generateThemeColors = (themes, options) => {
+  const colors = {};
+  const firstTheme = Object.values(themes)[0];
+  if (!firstTheme) return colors;
+
+  for (const key of Object.keys(firstTheme)) {
+    colors[key] = `var(${options.produceCssVariable(key)})`;
+  }
+  return colors;
+};
+
 /**
- * themes using tw-colors lib which provides convience and exposes
+ * themes using custom plugin to provide convenience and expose
  * all values in name spaced css variables for universal compatibility
  */
-export const themes = createThemes(
-  {
-    aqua: themeAqua.colors,
-    custom: themeCustom.colors,
-    fantasy: themeFantasy.colors,
-    garden: themeGarden.colors,
-    retro: themeRetro.colors,
-    synthwave: themeSynthwave.colors,
+export const themes = plugin(
+  function ({ addBase }) {
+    Object.entries(themeMap).forEach(([themeName, themeColors]) => {
+      const cssVars = {};
+      Object.entries(themeColors).forEach(([key, value]) => {
+        cssVars[options.produceCssVariable(key)] = value;
+      });
+      addBase({
+        [`[data-theme="${themeName}"]`]: cssVars,
+      });
+    });
   },
   {
-    produceCssVariable: (tokenName) => `--vui-color-${tokenName}`,
+    theme: {
+      extend: {
+        colors: generateThemeColors(themeMap, options),
+      },
+    },
   }
 );
 
