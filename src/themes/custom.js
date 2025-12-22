@@ -58,18 +58,18 @@ const config = {
   ...customVars,
   // _____ STYLE OVERRIDES _____
   '.link': {
-    color: 'hsl(var(--vui-color-link))',
+    color: 'var(--vui-color-link)',
   },
   '.divider:before, .divider:after': {
-    'background-color': 'hsl(var(--vui-color-foreground))',
+    'background-color': 'var(--vui-color-foreground)',
     height: '1px',
   },
   '.btn, .btn-primary, .btn-secondary, .btn-neutral': {
-    'outline-color': 'hsl(var(--vui-color-focus-ring))',
+    'outline-color': 'var(--vui-color-focus-ring)',
   },
   '.input-primary:not(.input-error), .checkbox-primary:not(:checked,  .checkbox-error), .radio-primary:not(.radio-error), .select-primary:not(.select-error), .textarea-primary:not(.textarea-error)':
     {
-      'border-color': 'hsl(var(--vui-color-foreground) / 1)',
+      'border-color': 'var(--vui-color-foreground)',
     },
   '.alert': {
     'grid-auto-flow': 'column',
@@ -82,20 +82,20 @@ const config = {
     'border-radius': 0,
   },
   '.progress-warning::-moz-progress-bar': {
-    'background-color': 'hsl(var(--vui-color-warning-content))',
+    'background-color': 'var(--vui-color-warning-content)',
   },
   // must be repeated as individual selector due to webkit bug https://nicolasbouliane.com/blog/webkit-progress-value
   '.progress::-webkit-progress-value': {
     'border-radius': 0,
   },
   '.progress-warning::-webkit-progress-value': {
-    'background-color': 'hsl(var(--vui-color-warning-content))',
+    'background-color': 'var(--vui-color-warning-content)',
   },
   '.join-item.btn:hover': {
     'background-color': 'inherit',
   },
   '.join-item.btn:is(:checked):hover': {
-    'background-color': 'hsl(var(--my-bg-active))',
+    'background-color': 'var(--my-bg-active)',
   },
 };
 

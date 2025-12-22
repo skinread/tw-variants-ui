@@ -51,8 +51,14 @@ export const themes = plugin(
     Object.entries(themeMap).forEach(([themeName, themeColors]) => {
       const cssVars = {};
       Object.entries(themeColors).forEach(([key, value]) => {
-        cssVars[options.produceCssVariable(key)] = value;
+        const varName = options.produceCssVariable(key);
+        cssVars[varName] = value;
+
+        // Map everything to standard Tailwind v4 / DaisyUI v5 tokens
+        // logic: DaisyUI v5 uses --color-* for components
+        cssVars[`--color-${key}`] = value;
       });
+
       addBase({
         [`[data-theme="${themeName}"]`]: cssVars,
       });
