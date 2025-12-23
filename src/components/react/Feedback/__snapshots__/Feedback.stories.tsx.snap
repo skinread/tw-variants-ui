@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`React/Feedback Error smoke-test 1`] = `
 <div class="alert p-4 border-0 border-l-[6px] rounded-md alert-error bg-error/15 border-error">

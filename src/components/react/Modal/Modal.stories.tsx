@@ -65,7 +65,7 @@ export const InteractionTest: Story = {
   play: async ({ args, canvasElement, step }) => {
     const canvas = within(canvasElement);
     const button = canvas.getByText(triggerText);
-    const modal = canvas.getByRole('dialog');
+    const modal = canvas.getByRole('dialog', { hidden: true });
     const closeButton = canvas.getByLabelText('close modal');
 
     async function clickWithDelay(e: Element) {
