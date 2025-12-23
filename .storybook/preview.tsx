@@ -21,6 +21,7 @@ const preview: Preview = {
       attributeName: 'data-theme',
     }),
   ],
+
   parameters: {
     options: {
       storySort: {
@@ -29,13 +30,12 @@ const preview: Preview = {
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
     backgrounds: {
-      default: 'neutral',
-      values: [
-        {
+      options: {
+        neutral: {
           name: 'neutral',
           value: 'hsl(var(--vui-color-background))',
         },
-      ],
+      },
     },
     controls: {
       matchers: {
@@ -48,6 +48,12 @@ const preview: Preview = {
     darkMode: {
       dark: darkStorybook,
       light: lightStorybook,
+    },
+  },
+
+  initialGlobals: {
+    backgrounds: {
+      value: 'neutral',
     },
   },
 };
