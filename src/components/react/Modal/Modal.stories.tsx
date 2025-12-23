@@ -81,7 +81,7 @@ export const InteractionTest: Story = {
       await clickWithDelay(button);
       await expect(modal).toBeVisible();
       await expect(modal).toHaveTextContent(args.title!);
-      await expect(modal).toHaveTextContent(modal.getElementsByTagName('p')[0]!.textContent!);
+      await expect(modal).toHaveTextContent(modal.getElementsByTagName('p')[0]!.textContent);
       await expect(closeButton).toHaveFocus();
     });
 

@@ -4,8 +4,10 @@ import { autocompleteVariants, validityFromProps } from '@common';
 import { type InputFieldProps } from '@components/react';
 import { FieldFeedback } from '../InputField/FieldFeedback';
 
-export interface AutocompleteProps
-  extends Omit<InputFieldProps, 'type' | 'localise' | 'dir' | 'value'> {
+export interface AutocompleteProps extends Omit<
+  InputFieldProps,
+  'type' | 'localise' | 'dir' | 'value'
+> {
   /**
    * Options data
    */
