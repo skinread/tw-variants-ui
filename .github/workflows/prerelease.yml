@@ -30,22 +30,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
-      - name: Cache or restore dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm-
       - name: Install dependencies
         run: npm ci
       - name: Build
         run: npm run build
       - name: Publish to pkg.pr.new
         run: npx pkg-pr-new publish
-    # - name: Configure Git
-    #   uses: oleksiyrudenko/gha-git-credentials@v2-latest
-    #   with:
-    #     token: '${{ secrets.GITHUB_TOKEN }}'
-    # - name: Release-It
-    #   run: |
-    #     npm run release -- --preRelease=development --'hooks.after:bump='
