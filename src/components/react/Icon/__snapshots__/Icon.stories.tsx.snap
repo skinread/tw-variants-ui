@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`React/Icon Icon smoke-test 1`] = `
 <svg xmlns="http://www.w3.org/2000/svg"

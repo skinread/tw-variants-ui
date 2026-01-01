@@ -5,8 +5,7 @@ import { type CommonFieldProps } from '@components/react';
 type TextAreaPropsFiltered = Omit<React.ComponentPropsWithoutRef<'textarea'>, 'name'>;
 
 export interface TextAreaProps
-  extends Pick<CommonFieldProps, 'label' | 'name' | 'hasError' | 'id'>,
-    TextAreaPropsFiltered {
+  extends Pick<CommonFieldProps, 'label' | 'name' | 'hasError' | 'id'>, TextAreaPropsFiltered {
   /**
    * The placeholder text will appear in the field while it is empty to help instruct the user
    */

@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`React/Radio Buttons Basic smoke-test 1`] = `
 <div class="form-control flex-row">
   <label class="label items-start px-0 cursor-pointer">
-    <input type="radio"
-           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
-           name="demo-radio-buttons"
+    <input class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           type="radio"
            value="1"
            checked
+           name="demo-radio-buttons"
     >
     <span class="label-text text-base ml-2.5">
       Option one
@@ -16,10 +16,10 @@ exports[`React/Radio Buttons Basic smoke-test 1`] = `
 </div>
 <div class="form-control flex-row">
   <label class="label items-start px-0 cursor-pointer">
-    <input type="radio"
-           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
-           name="demo-radio-buttons"
+    <input class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           type="radio"
            value="2"
+           name="demo-radio-buttons"
     >
     <span class="label-text text-base ml-2.5">
       Option two
@@ -28,10 +28,10 @@ exports[`React/Radio Buttons Basic smoke-test 1`] = `
 </div>
 <div class="form-control flex-row">
   <label class="label items-start px-0 cursor-pointer">
-    <input type="radio"
-           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
-           name="demo-radio-buttons"
+    <input class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           type="radio"
            value="3"
+           name="demo-radio-buttons"
     >
     <span class="label-text text-base ml-2.5">
       Option three
@@ -43,10 +43,10 @@ exports[`React/Radio Buttons Basic smoke-test 1`] = `
 exports[`React/Radio Buttons InteractionTest play-test 1`] = `
 <div class="form-control flex-row">
   <label class="label items-start px-0 cursor-pointer">
-    <input type="radio"
-           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
-           name="demo-radio-buttons"
+    <input class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           type="radio"
            value="1"
+           name="demo-radio-buttons"
     >
     <span class="label-text text-base ml-2.5">
       Option one
@@ -55,10 +55,10 @@ exports[`React/Radio Buttons InteractionTest play-test 1`] = `
 </div>
 <div class="form-control flex-row">
   <label class="label items-start px-0 cursor-pointer">
-    <input type="radio"
-           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
-           name="demo-radio-buttons"
+    <input class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           type="radio"
            value="2"
+           name="demo-radio-buttons"
     >
     <span class="label-text text-base ml-2.5">
       Option two
@@ -67,10 +67,10 @@ exports[`React/Radio Buttons InteractionTest play-test 1`] = `
 </div>
 <div class="form-control flex-row">
   <label class="label items-start px-0 cursor-pointer">
-    <input type="radio"
-           class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
-           name="demo-radio-buttons"
+    <input class="placeholder:text-subtle radio radio-primary w-[--vui-radio-size] h-[--vui-radio-size] bg-white"
+           type="radio"
            value="3"
+           name="demo-radio-buttons"
     >
     <span class="label-text text-base ml-2.5">
       Option three

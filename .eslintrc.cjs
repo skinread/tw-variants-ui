@@ -30,7 +30,13 @@ module.exports = {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-  ignorePatterns: ['dist', 'postcss.config.js', 'tailwind.config.js'],
+  ignorePatterns: [
+    'dist',
+    'postcss.config.js',
+    'tailwind.config.js',
+    'src/tailwind-preset.js',
+    'src/themes/*.js',
+  ],
   rules: {
     'prettier/prettier': 'warn',
     'no-duplicate-imports': 'error',

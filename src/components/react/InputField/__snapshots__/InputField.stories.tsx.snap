@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`React/Input Field AdditionalContent smoke-test 1`] = `
 <div class="form-control">
@@ -82,13 +82,13 @@ exports[`React/Input Field AdditionalContent smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-demo-text-info-field"
+    <input id="input-field-demo-text-info-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
            aria-labelledby="input-field-demo-text-info-field-feedback"
            aria-describedby="input-field-demo-text-info-field-description"
-           name="demo-text-info-field"
            placeholder="Type in here"
+           type="text"
+           name="demo-text-info-field"
     >
   </div>
   <label class="block leading-5 mt-2 [&amp;>label]:mt-0"
@@ -116,11 +116,11 @@ exports[`React/Input Field Color smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="color"
-           id="input-field-demo-color-field"
+    <input id="input-field-demo-color-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
-           name="demo-color-field"
            placeholder="Type in here"
+           type="color"
+           name="demo-color-field"
     >
   </div>
 </div>
@@ -136,13 +136,13 @@ exports[`React/Input Field ControlledInput smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-demo-text-field-controlled"
+    <input id="input-field-demo-text-field-controlled"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
            aria-labelledby="input-field-demo-text-field-controlled-feedback"
-           name="demo-text-field-controlled"
            placeholder="Type in here"
+           type="text"
            value="can't type here"
+           name="demo-text-field-controlled"
     >
   </div>
   <label class="block leading-5 mt-2 [&amp;>label]:mt-0"
@@ -163,12 +163,12 @@ exports[`React/Input Field Date smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="date"
-           id="input-field-demo-date-field"
+    <input id="input-field-demo-date-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
-           name="demo-date-field"
            placeholder="Type in here"
            autocomplete="bday"
+           type="date"
+           name="demo-date-field"
     >
   </div>
 </div>
@@ -184,13 +184,13 @@ exports[`React/Input Field Email smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="email"
-           id="input-field-demo-email-field"
+    <input id="input-field-demo-email-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
-           name="demo-email-field"
            placeholder="name@server.com"
            inputmode="email"
            autocomplete="email"
+           type="email"
+           name="demo-email-field"
     >
   </div>
 </div>
@@ -211,13 +211,13 @@ exports[`React/Input Field FeedbackContentTest play-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-feedback-content-test"
+    <input id="input-field-feedback-content-test"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] border-2 h-[42px] px-3 input-error w-full"
            aria-labelledby="input-field-feedback-content-test-feedback"
            aria-describedby="input-field-feedback-content-test-description"
-           name="feedback-content-test"
            placeholder="Type in here"
+           type="text"
+           name="feedback-content-test"
     >
   </div>
   <label class="leading-5 mt-2 [&amp;>label]:mt-0 text-error fill-error flex"
@@ -258,11 +258,11 @@ exports[`React/Input Field InteractionTest play-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-interaction-test"
+    <input id="input-field-interaction-test"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
-           name="interaction-test"
            placeholder="Type in here"
+           type="text"
+           name="interaction-test"
     >
   </div>
 </div>
@@ -278,12 +278,12 @@ exports[`React/Input Field InvalidText smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-demo-invalid-text-field"
+    <input id="input-field-demo-invalid-text-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] border-2 h-[42px] px-3 input-error w-full"
            aria-labelledby="input-field-demo-invalid-text-field-feedback"
-           name="demo-invalid-text-field"
            placeholder="Type in here"
+           type="text"
+           name="demo-invalid-text-field"
     >
   </div>
   <label class="leading-5 mt-2 [&amp;>label]:mt-0 text-error fill-error flex"
@@ -317,12 +317,12 @@ exports[`React/Input Field Number smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="number"
-           id="input-field-demo-number-field"
+    <input id="input-field-demo-number-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
-           name="demo-number-field"
            placeholder="Type in here"
            inputmode="numeric"
+           type="number"
+           name="demo-number-field"
     >
   </div>
 </div>
@@ -338,14 +338,14 @@ exports[`React/Input Field Password smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="password"
-           id="input-field-demo-password-field"
+    <input id="input-field-demo-password-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 pr-12 w-full"
-           name="demo-password-field"
            placeholder="Type in here"
            autocomplete="current-password"
            autocorrect="off"
            spellcheck="false"
+           type="password"
+           name="demo-password-field"
     >
     <button class="-ml-11"
             aria-label="show password"
@@ -379,11 +379,11 @@ exports[`React/Input Field PasswordToggleTest play-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-test-password-toggle"
+    <input id="input-field-test-password-toggle"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 pr-12 w-full"
-           name="test-password-toggle"
            placeholder="Type in here"
+           type="text"
+           name="test-password-toggle"
     >
     <button class="-ml-11"
             aria-label="hide password"
@@ -421,13 +421,13 @@ exports[`React/Input Field Telephone smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="tel"
-           id="input-field-demo-tel-field"
+    <input id="input-field-demo-tel-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
-           name="demo-tel-field"
            placeholder="Type in here"
            inputmode="tel"
            autocomplete="tel"
+           type="tel"
+           name="demo-tel-field"
     >
   </div>
 </div>
@@ -443,12 +443,12 @@ exports[`React/Input Field Text smoke-test 1`] = `
     </span>
   </label>
   <div class="flex">
-    <input type="text"
-           id="input-field-demo-text-field"
+    <input id="input-field-demo-text-field"
            class="placeholder:text-subtle input input-primary rounded-[--rounded-field] h-[42px] px-3 w-full"
            aria-labelledby="input-field-demo-text-field-feedback"
-           name="demo-text-field"
            placeholder="Type in here"
+           type="text"
+           name="demo-text-field"
     >
   </div>
   <label class="block leading-5 mt-2 [&amp;>label]:mt-0"

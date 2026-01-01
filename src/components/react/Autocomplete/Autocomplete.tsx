@@ -4,8 +4,10 @@ import { autocompleteVariants, validityFromProps } from '@common';
 import { type InputFieldProps } from '@components/react';
 import { FieldFeedback } from '../InputField/FieldFeedback';
 
-export interface AutocompleteProps
-  extends Omit<InputFieldProps, 'type' | 'localise' | 'dir' | 'value'> {
+export interface AutocompleteProps extends Omit<
+  InputFieldProps,
+  'type' | 'localise' | 'dir' | 'value'
+> {
   /**
    * Options data
    */
@@ -97,9 +99,15 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
 
     return (
       <Combobox
-        onChange={(value: string) => {
-          setQuery(getLabelFromValue(value));
-          onChangeValue?.(value);
+        onChange={(value: string | number | readonly string[] | null) => {
+          const strValue = value as string | null;
+          if (!strValue) {
+            setQuery('');
+            onChangeValue?.('');
+            return;
+          }
+          setQuery(getLabelFromValue(strValue));
+          onChangeValue?.(strValue);
         }}
         defaultValue={defaultValue}
         disabled={disabled}
