@@ -11,6 +11,7 @@ const config: StorybookConfig = {
     '@storybook/addon-coverage',
     // 'storybook-dark-mode',
     '@storybook/addon-docs',
+    '@storybook/addon-vitest',
   ],
   framework: {
     name: '@storybook/react-vite',

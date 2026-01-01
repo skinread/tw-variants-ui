@@ -78,7 +78,6 @@ export const inputVariants = tv({
       class: {
         label: 'cursor-pointer',
         labelText: 'ml-2.5',
-        input: 'bg-white',
       },
     },
     // --- validity: error ---

@@ -1,4 +1,4 @@
-import { create } from 'storybook/theming/create';
+import { create, type ThemeVars } from 'storybook/theming';
 
 const brand = {
   brandTitle: 'Tailwind Variants UI',
@@ -10,7 +10,7 @@ const brand = {
 /**
  * Storybook skin for light mode. This is not a component story theme.
  */
-export const lightStorybook = create({
+export const lightStorybook: ThemeVars = create({
   base: 'light',
   ...brand,
 });
@@ -18,7 +18,7 @@ export const lightStorybook = create({
 /**
  * Storybook skin for dark mode. This is not a component story theme.
  */
-export const darkStorybook = create({
+export const darkStorybook: ThemeVars = create({
   base: 'dark',
   ...brand,
 });

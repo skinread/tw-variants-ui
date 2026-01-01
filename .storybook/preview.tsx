@@ -21,33 +21,50 @@ const preview: Preview = {
       attributeName: 'data-theme',
     }),
   ],
+
   parameters: {
     options: {
       storySort: {
         order: ['README', 'Design Tokens', 'Typography'],
       },
     },
+
     actions: { argTypesRegex: '^on[A-Z].*' },
+
     backgrounds: {
-      default: 'neutral',
-      values: [
-        {
+      options: {
+        neutral: {
           name: 'neutral',
           value: 'hsl(var(--vui-color-background))',
         },
-      ],
+      },
     },
+
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/,
       },
     },
+
     // Use the darkMode plugin to better preset the Storybook theme
     // these themes are not applied to component stories
     darkMode: {
       dark: darkStorybook,
       light: lightStorybook,
+    },
+
+    a11y: {
+      // 'todo' - show a11y violations in the test UI only
+      // 'error' - fail CI on a11y violations
+      // 'off' - skip a11y checks entirely
+      test: 'todo',
+    },
+  },
+
+  initialGlobals: {
+    backgrounds: {
+      value: 'neutral',
     },
   },
 };
