@@ -9,21 +9,21 @@ A React + Tailwind + DaisyUI component library (ESM). This file is the primary r
 
 ## Quick-start commands
 
-| Task | Command |
-|---|---|
-| Install deps | `npm install` |
-| Storybook dev (port 6006) | `npm run dev` |
-| Build library | `npm run build` |
-| Build Storybook | `npm run storybook:build` |
-| Serve built Storybook (port 6007) | `npm run storybook:serve` |
-| Unit tests | `npm test` |
-| Tests with UI | `npm run test:ui` |
-| CI tests + coverage | `npm run test:ci` |
-| Lint | `npm run lint` / `npm run lint:fix` |
-| Format | `npm run format` |
-| Typecheck | `npm run typecheck` |
-| New component scaffold | `npm run generate:component` |
-| Release (interactive) | `npm run release` |
+| Task                              | Command                             |
+| --------------------------------- | ----------------------------------- |
+| Install deps                      | `npm install`                       |
+| Storybook dev (port 6006)         | `npm run dev`                       |
+| Build library                     | `npm run build`                     |
+| Build Storybook                   | `npm run storybook:build`           |
+| Serve built Storybook (port 6007) | `npm run storybook:serve`           |
+| Unit tests                        | `npm test`                          |
+| Tests with UI                     | `npm run test:ui`                   |
+| CI tests + coverage               | `npm run test:ci`                   |
+| Lint                              | `npm run lint` / `npm run lint:fix` |
+| Format                            | `npm run format`                    |
+| Typecheck                         | `npm run typecheck`                 |
+| New component scaffold            | `npm run generate:component`        |
+| Release (interactive)             | `npm run release`                   |
 
 > `npm test` triggers `pretest` which runs `playwright install --with-deps` automatically.
 
@@ -46,14 +46,14 @@ src/
     progress.variants.ts
     toggle.variants.ts
   assets/                  # UI icons used by components
-  themes/                  # DaisyUI: custom + built-ins enabled in tailwind-preset (e.g. aqua, coffee, cyberpunk, luxury, retro, synthwave)
+  themes/                  # DaisyUI theme presets (custom, synthwave, fantasy, garden, retro, aqua)
     index.js
   styles/                  # Global CSS (tailwind.css, shadow-parts.css)
   stories/                 # MDX documentation pages ONLY (Tokens, Typography, Readme, etc.)
                            # NOT where component stories live — those are colocated in components/react/
   tokens/
-    index.js               # `tokens` export for JS consumers; colours from semantic.js
-    semantic.js            # Light/dark semantic palettes — source for themes/custom.js & themes/dark.js
+    index.js               # Raw design tokens object (colors, spacing, borderRadius, fontFamily)
+                           # ⚠️ Not yet wired into package.json exports or the Tailwind preset
   tailwind-preset.js       # Tailwind + DaisyUI + theme presets integration
 
 generator/
@@ -65,9 +65,9 @@ generator/
 
 Current components in `src/components/react/`:
 
-`Autocomplete` · `Button` · `Checkbox` · `Feedback` · `Field` · `Icon` · `InputField` · `Modal` · `RadioButtons` · `Select` · `TextArea`
+`Autocomplete` · `Button` · `ButtonLink` · `Checkbox` · `Feedback` · `Icon` · `InputField` · `Modal` · `RadioButtons` · `Select` · `TextArea`
 
-> `InputField` is built from the compound `Field` API (`Field.Label`, `Field.Input`, `Field.Feedback`, `Field.Description`). `FieldFeedback.tsx` remains the implementation for feedback styling.
+> `InputField` also contains a `FieldFeedback.tsx` sub-component (not barrel-exported separately).
 
 ## How components are organised
 
@@ -81,7 +81,6 @@ Current components in `src/components/react/`:
 
 - `generator/plopfile.js` is in `generator/`, not the repo root.
 - `src/stories/` contains MDX docs pages only — don't put component stories there.
-- `src/tokens/` — `import { tokens } from 'tw-variants-ui/tokens'` (see `package.json` `exports`).
-- `src/tailwind-preset.js` scopes the custom palette to `[data-theme="custom"]` (not `:root`, so built-in DaisyUI themes keep their colours). For other themes, `--vui-color-*` aliases `--color-*` on `[data-theme]` / `:root:not([data-theme])`.
+- `src/tokens/index.js` exports a `tokens` object but is not in `package.json` exports yet; don't assume consumers can import it.
 - Tailwind content glob covers many extensions (`html/md/mdx/mjs/js/ts/tsx`).
 - Storybook and tests have separate watch/build flows; several scripts exist for each lifecycle stage.
