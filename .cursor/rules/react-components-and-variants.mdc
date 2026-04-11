@@ -1,0 +1,12 @@
+---
+description: React components, barrel exports, and shared variants
+globs: src/components/react/**/*.{tsx,ts},src/common/**/*.ts
+alwaysApply: false
+---
+
+# Components and variants
+
+- **Exports:** named exports from `ComponentName.tsx`; re-export from `src/components/react/index.ts` only (no new export paths without a project decision).
+- **Styling:** use shared definitions in `src/common` (e.g. `tailwind-variants` patterns) consistently with existing components; avoid one-off duplicate token strings when a variant already exists.
+- **New components:** use `npm run generate:component` so stories and barrel wiring stay aligned.
+- **Stories:** colocate with project convention under `src/stories/` (see existing stories for patterns).
