@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin';
 import { themeAqua } from './aqua';
 import { themeCustom } from './custom';
+import { themeDark } from './dark';
 import { themeFantasy } from './fantasy';
 import { themeGarden } from './garden';
 import { themeRetro } from './retro';
@@ -21,6 +22,7 @@ export const defaultExtensions = {
 const themeMap = {
   aqua: themeAqua.colors,
   custom: themeCustom.colors,
+  dark: themeDark.colors,
   fantasy: themeFantasy.colors,
   garden: themeGarden.colors,
   retro: themeRetro.colors,
@@ -98,6 +100,7 @@ function mapThemeToDaisyUI(theme) {
 export const daisyuiThemes = {
   aqua: mapThemeToDaisyUI(themeAqua.config),
   custom: mapThemeToDaisyUI(themeCustom.config),
+  dark: mapThemeToDaisyUI(themeDark.config),
   fantasy: mapThemeToDaisyUI(themeFantasy.config),
   garden: mapThemeToDaisyUI(themeGarden.config),
   retro: mapThemeToDaisyUI(themeRetro.config),
