@@ -11,7 +11,7 @@ export interface ButtonProps extends ButtonVariantsWithDocs, ButtonPropsFiltered
    */
   children: React.ReactNode;
   /**
-   * Not recommended, className override does not yet merge with tailwind-variants as expected
+   * Additional classes merged with variant output via tailwind-merge
    */
   className?: string;
 }
@@ -20,10 +20,10 @@ export interface ButtonProps extends ButtonVariantsWithDocs, ButtonPropsFiltered
  * Styled button element. For navigation link buttons use Button Link. Also exposes intrinsic `<button>` attributes.
  */
 export const Button = (props: ButtonProps) => {
-  const { children, color = 'primary', fullWidth = false, ...elemAttrs } = props;
+  const { children, color = 'primary', fullWidth = false, className, ...elemAttrs } = props;
 
   return (
-    <button className={buttonVariants({ color, fullWidth })} {...elemAttrs}>
+    <button className={buttonVariants({ color, fullWidth, class: className })} {...elemAttrs}>
       {children}
     </button>
   );

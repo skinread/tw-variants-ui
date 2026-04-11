@@ -49,13 +49,14 @@ export function ButtonLink<E extends React.ElementType = typeof defaultElement>(
     color,
     fullWidth = false,
     isExternal,
+    className,
     ...elemAttrs
   } = props;
 
   const linkAttrs = isExternal ? { ...externalAttrs, ...elemAttrs } : elemAttrs;
 
   return (
-    <Component className={buttonVariants({ color, fullWidth })} {...linkAttrs}>
+    <Component className={buttonVariants({ color, fullWidth, class: className })} {...linkAttrs}>
       {children}
       {!!isExternal && <Icon name="external" width={19} />}
     </Component>

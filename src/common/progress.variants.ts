@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from './tv';
 
 export const progressVariants = tv({
   base: 'progress rounded-none',
