@@ -15,6 +15,7 @@ export interface ButtonProps extends ButtonVariantsWithDocs, ButtonPropsFiltered
   children?: React.ReactNode;
   /**
    * Additional classes merged with variant output via tailwind-merge
+   * Additional classes merged with variant output via tailwind-merge
    */
   className?: string;
   /**
@@ -41,48 +42,10 @@ function assignRef<T>(ref: React.Ref<T> | undefined, node: T | null) {
  * Styled button, or another element via `render`, with shared variant styles. Exposes intrinsic `<button>` attributes when not using `render`.
  */
 export const Button = (props: ButtonProps) => {
-  const {
-    children,
-    color = 'primary',
-    fullWidth = false,
-    className,
-    ref,
-    render,
-    isExternal,
-    ...elemAttrs
-  } = props;
-
-  const classes = buttonVariants({ color, fullWidth, class: className });
-
-  if (render) {
-    const childRef = render.props.ref;
-    const externalAttrs: Record<string, string> = isExternal
-      ? { rel: 'noopener noreferrer', target: '_blank' }
-      : {};
-
-    return cloneElement(render, {
-      ...elemAttrs,
-      ...externalAttrs,
-      ref: (node: HTMLElement | null) => {
-        assignRef(ref, node);
-        assignRef(childRef, node);
-      },
-      className: buttonVariants({
-        color,
-        fullWidth,
-        class: [render.props.className, className].filter(Boolean).join(' ') || undefined,
-      }),
-      children: (
-        <>
-          {children ?? render.props.children}
-          {isExternal ? <Icon name="external" width={19} /> : null}
-        </>
-      ),
-    } as never);
-  }
+  const { children, color = 'primary', fullWidth = false, className, ...elemAttrs } = props;
 
   return (
-    <button ref={ref} className={classes} {...elemAttrs}>
+    <button className={buttonVariants({ color, fullWidth, class: className })} {...elemAttrs}>
       {children}
     </button>
   );
