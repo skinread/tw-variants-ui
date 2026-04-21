@@ -11,9 +11,10 @@ const preview: Preview = {
     withThemeByDataAttribute({
       themes: {
         Aqua: 'aqua',
+        Cyberpunk: 'cyberpunk',
         Custom: 'custom',
-        Fantasy: 'fantasy',
-        Garden: 'garden',
+        Luxury: 'luxury',
+        Coffee: 'coffee',
         Retro: 'retro',
         Synthwave: 'synthwave',
       },

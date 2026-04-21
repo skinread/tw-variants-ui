@@ -14,7 +14,7 @@ Semantic colours are defined once in `src/tokens/semantic.js` and reused by:
 
 - **`tokens` export** (`tw-variants-ui/tokens`) — JS object for tooling and tests
 - **DaisyUI themes** — `src/themes/custom.js` (light/custom) and `src/themes/dark.js`
-- **CSS variables** — `src/tailwind-preset.js` injects matching `--color-*` and `--vui-color-*` on `:root` for the default custom palette; switching `data-theme` updates DaisyUI-driven vars
+- **CSS variables** — the custom palette (`--color-*` / `--vui-color-*`) is scoped to `data-theme="custom"`; other themes use DaisyUI’s `--color-*` on `[data-theme=…]`, with `--vui-color-*` aliased to `--color-*` so legacy tokens track the active theme
 
 ### Theme overview
 

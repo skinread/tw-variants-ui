@@ -91,7 +91,7 @@ export interface FieldRootProps {
 }
 
 function FieldRoot({ name, id: idProp, hasError, children }: FieldRootProps) {
-  const id = useRef(idProp ?? `field-${name}`);
+  const id = useRef(idProp ?? `input-field-${name}`);
   const [hasFeedbackSlot, setHasFeedbackSlot] = useState(false);
   const [hasDescriptionSlot, setHasDescriptionSlot] = useState(false);
 

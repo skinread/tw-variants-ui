@@ -46,7 +46,7 @@ src/
     progress.variants.ts
     toggle.variants.ts
   assets/                  # UI icons used by components
-  themes/                  # DaisyUI theme presets (custom, synthwave, fantasy, garden, retro, aqua)
+  themes/                  # DaisyUI: custom + built-ins enabled in tailwind-preset (e.g. aqua, coffee, cyberpunk, luxury, retro, synthwave)
     index.js
   styles/                  # Global CSS (tailwind.css, shadow-parts.css)
   stories/                 # MDX documentation pages ONLY (Tokens, Typography, Readme, etc.)
@@ -82,6 +82,6 @@ Current components in `src/components/react/`:
 - `generator/plopfile.js` is in `generator/`, not the repo root.
 - `src/stories/` contains MDX docs pages only — don't put component stories there.
 - `src/tokens/` — `import { tokens } from 'tw-variants-ui/tokens'` (see `package.json` `exports`).
-- `src/tailwind-preset.js` seeds `:root` with `--color-*` and `--vui-color-*` from the custom theme colours plus `customVars` from `themes/custom.js`.
+- `src/tailwind-preset.js` scopes the custom palette to `[data-theme="custom"]` (not `:root`, so built-in DaisyUI themes keep their colours). For other themes, `--vui-color-*` aliases `--color-*` on `[data-theme]` / `:root:not([data-theme])`.
 - Tailwind content glob covers many extensions (`html/md/mdx/mjs/js/ts/tsx`).
 - Storybook and tests have separate watch/build flows; several scripts exist for each lifecycle stage.
