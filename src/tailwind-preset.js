@@ -1,6 +1,6 @@
 import daisyui from 'daisyui';
 import plugin from 'tailwindcss/plugin';
-import { daisyuiThemes, themes, fontFamily, defaultExtensions } from './themes';
+import { fontFamily, defaultExtensions } from './themes';
 import { themeCustom, customVars } from './themes/custom';
 
 /** @type {import('tailwindcss').Config} */
@@ -9,34 +9,37 @@ const preset = {
   theme: {
     extend: {
       ...defaultExtensions,
+      fontFamily,
     },
-    fontFamily,
   },
   plugins: [
-    themes,
-    daisyui,
+    // DaisyUI v5
+    daisyui({
+      themes: [
+        'light --default',
+        'dark --prefersdark',
+        'aqua',
+        'fantasy',
+        'garden',
+        'retro',
+        'synthwave',
+        // Registered via addBase below — DaisyUI v5 only accepts string theme names here
+        'custom',
+      ],
+    }),
     plugin(function ({ addBase }) {
-      // Inject custom theme as the :root default so that --vui-color-* (public
-      // consumer API) and --color-* (DaisyUI v5 alias) are always defined, even
-      // when no data-theme attribute is present. Mirrors the same dual-write
-      // pattern used by the theme plugin per [data-theme] selector.
       const rootVars = {};
       Object.entries(themeCustom.colors).forEach(([key, value]) => {
-        rootVars[`--vui-color-${key}`] = value;
         rootVars[`--color-${key}`] = value;
+        rootVars[`--vui-color-${key}`] = value;
       });
       Object.entries(customVars).forEach(([key, value]) => {
         rootVars[key] = value;
       });
       addBase({ ':root': rootVars });
+      addBase({ '[data-theme="custom"]': themeCustom.config });
     }),
   ],
-  daisyui: {
-    themes: [daisyuiThemes],
-    darkTheme: 'dark',
-    // styled: false,
-    // prefix: 'vui-',
-  },
 };
 
 export default preset;
