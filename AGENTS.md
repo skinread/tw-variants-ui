@@ -52,8 +52,8 @@ src/
   stories/                 # MDX documentation pages ONLY (Tokens, Typography, Readme, etc.)
                            # NOT where component stories live — those are colocated in components/react/
   tokens/
-    index.js               # Raw design tokens object (colors, spacing, borderRadius, fontFamily)
-                           # ⚠️ Not yet wired into package.json exports or the Tailwind preset
+    index.js               # `tokens` export for JS consumers; colours from semantic.js
+    semantic.js            # Light/dark semantic palettes — source for themes/custom.js & themes/dark.js
   tailwind-preset.js       # Tailwind + DaisyUI + theme presets integration
 
 generator/
@@ -65,9 +65,9 @@ generator/
 
 Current components in `src/components/react/`:
 
-`Autocomplete` · `Button` · `ButtonLink` · `Checkbox` · `Feedback` · `Icon` · `InputField` · `Modal` · `RadioButtons` · `Select` · `TextArea`
+`Autocomplete` · `Button` · `Checkbox` · `Feedback` · `Field` · `Icon` · `InputField` · `Modal` · `RadioButtons` · `Select` · `TextArea`
 
-> `InputField` also contains a `FieldFeedback.tsx` sub-component (not barrel-exported separately).
+> `InputField` is built from the compound `Field` API (`Field.Label`, `Field.Input`, `Field.Feedback`, `Field.Description`). `FieldFeedback.tsx` remains the implementation for feedback styling.
 
 ## How components are organised
 
@@ -81,6 +81,7 @@ Current components in `src/components/react/`:
 
 - `generator/plopfile.js` is in `generator/`, not the repo root.
 - `src/stories/` contains MDX docs pages only — don't put component stories there.
-- `src/tokens/index.js` exports a `tokens` object but is not in `package.json` exports yet; don't assume consumers can import it.
+- `src/tokens/` — `import { tokens } from 'tw-variants-ui/tokens'` (see `package.json` `exports`).
+- `src/tailwind-preset.js` seeds `:root` with `--color-*` and `--vui-color-*` from the custom theme colours plus `customVars` from `themes/custom.js`.
 - Tailwind content glob covers many extensions (`html/md/mdx/mjs/js/ts/tsx`).
 - Storybook and tests have separate watch/build flows; several scripts exist for each lifecycle stage.
