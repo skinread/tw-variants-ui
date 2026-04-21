@@ -1,9 +1,8 @@
-import { forwardRef } from 'react';
 import { inputVariants, validityFromProps } from '@common';
 import { type CommonFieldProps } from '@components/react';
 
 type RadioButtonsPropsFiltered = Omit<
-  React.ComponentPropsWithoutRef<'input'>,
+  React.ComponentPropsWithRef<'input'>,
   'name' | 'value' | 'defaultChecked'
 >;
 
@@ -27,30 +26,28 @@ export interface RadioButtonsProps extends CommonFieldPropsFiltered, RadioButton
  * (Work in progress) Styled radio button group expecting 2 or more options.
  * React `ref` enabled. Also exposes intrinsic `<input>` attributes.
  */
-export const RadioButtons = forwardRef<HTMLInputElement, RadioButtonsProps>(
-  function VuiRadioButtons(props, ref) {
-    const { defaultChecked, hasError, options, ...elemAttrs } = props;
-    const {
-      wrapper: wrapperStyle,
-      label: labelStyle,
-      input: inputStyle,
-      labelText: labelTextStyle,
-    } = inputVariants({ type: 'radio', validity: validityFromProps({ hasError }) });
+export function RadioButtons(props: RadioButtonsProps) {
+  const { ref, defaultChecked, hasError, options, ...elemAttrs } = props;
+  const {
+    wrapper: wrapperStyle,
+    label: labelStyle,
+    input: inputStyle,
+    labelText: labelTextStyle,
+  } = inputVariants({ type: 'radio', validity: validityFromProps({ hasError }) });
 
-    return options.map((radio, idx) => (
-      <div className={wrapperStyle()} key={idx}>
-        <label className={labelStyle()}>
-          <input
-            type="radio"
-            value={radio.value}
-            defaultChecked={defaultChecked === radio.value ? true : undefined}
-            className={inputStyle()}
-            {...elemAttrs}
-            ref={ref}
-          />
-          <span className={labelTextStyle()}>{radio.label}</span>
-        </label>
-      </div>
-    ));
-  }
-);
+  return options.map((radio, idx) => (
+    <div className={wrapperStyle()} key={idx}>
+      <label className={labelStyle()}>
+        <input
+          type="radio"
+          value={radio.value}
+          defaultChecked={defaultChecked === radio.value ? true : undefined}
+          className={inputStyle()}
+          {...elemAttrs}
+          ref={idx === 0 ? ref : undefined}
+        />
+        <span className={labelTextStyle()}>{radio.label}</span>
+      </label>
+    </div>
+  ));
+}

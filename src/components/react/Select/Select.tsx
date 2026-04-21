@@ -1,9 +1,9 @@
-import { forwardRef, useRef } from 'react';
+import { useRef } from 'react';
 import { inputVariants, validityFromProps } from '@common';
 import { type CommonFieldProps } from '@components/react';
 import { FieldFeedback } from '../InputField/FieldFeedback';
 
-type SelectPropsFiltered = Omit<React.ComponentPropsWithoutRef<'select'>, 'name' | 'localise'>;
+type SelectPropsFiltered = Omit<React.ComponentPropsWithRef<'select'>, 'name' | 'localise'>;
 
 export interface SelectProps extends CommonFieldProps, SelectPropsFiltered {
   /**
@@ -26,8 +26,9 @@ export interface SelectProps extends CommonFieldProps, SelectPropsFiltered {
 /**
  * Styled select box populated with an array. React `ref` enabled. Also exposes intrinsic `<select>` attributes.
  */
-export const Select = forwardRef<HTMLSelectElement, SelectProps>(function VuiSelect(props, ref) {
+export function Select(props: SelectProps) {
   const {
+    ref,
     defaultValue = '',
     descriptionContent,
     feedbackContent,
@@ -95,4 +96,4 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function VuiSel
       <Description />
     </div>
   );
-});
+}

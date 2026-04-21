@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef, forwardRef, type PropsWithChildren } from 'react';
+import { type ComponentPropsWithRef, type PropsWithChildren } from 'react';
 import { Icon } from '@components/react';
 import { modalVariants } from '@common';
 
@@ -39,8 +39,8 @@ export interface ModalProps extends ModalAttributes {
  * }}
  * ```
  */
-export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function VuiModal(props, ref) {
-  const { children, id, localise, title, ...attrs } = props;
+export function Modal(props: ModalProps) {
+  const { children, id, localise, title, ref, ...attrs } = props;
   const locale = {
     ...localeDefault,
     ...localise,
@@ -74,4 +74,4 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function VuiModal
       </form>
     </dialog>
   );
-});
+}
