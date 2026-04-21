@@ -35,7 +35,7 @@ const preview: Preview = {
       options: {
         neutral: {
           name: 'neutral',
-          value: 'hsl(var(--vui-color-background))',
+          value: 'var(--color-base-100, var(--vui-color-background, #ffffff))',
         },
       },
     },
