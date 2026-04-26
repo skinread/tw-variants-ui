@@ -1,5 +1,6 @@
-import { ComponentPropsWithRef, forwardRef, type PropsWithChildren } from 'react';
+import { type ComponentPropsWithRef, type PropsWithChildren } from 'react';
 import { Icon } from '@components/react';
+import { modalVariants } from '@common';
 
 const localeDefault = {
   labelClose: 'close modal',
@@ -38,31 +39,39 @@ export interface ModalProps extends ModalAttributes {
  * }}
  * ```
  */
-export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function VuiModal(props, ref) {
-  const { children, id, localise, title, ...attrs } = props;
+export function Modal(props: ModalProps) {
+  const { children, id, localise, title, ref, ...attrs } = props;
   const locale = {
     ...localeDefault,
     ...localise,
   };
+  const {
+    dialog: dialogStyle,
+    box: boxStyle,
+    header: headerStyle,
+    closeButton: closeButtonStyle,
+    body: bodyStyle,
+    title: titleStyle,
+    backdrop: backdropStyle,
+    backdropButton: backdropButtonStyle,
+  } = modalVariants();
 
   return (
-    <dialog className="modal items-end sm:items-center" id={id} {...attrs} ref={ref}>
-      <div className="modal-box flex flex-col rounded-md p-8 pt-6 w-full max-w-none sm:max-w-xl overflow-hidden">
-        <form method="dialog" className="flex justify-end">
-          {/* main close button */}
-          <button className="btn btn-xs btn-square btn-ghost" aria-label={locale.labelClose}>
+    <dialog className={dialogStyle()} id={id} {...attrs} ref={ref}>
+      <div className={boxStyle()}>
+        <form method="dialog" className={headerStyle()}>
+          <button className={closeButtonStyle()} aria-label={locale.labelClose}>
             <Icon name="cross" className="stroke-foreground" width={16} />
           </button>
         </form>
-        <div className="mt-4 overflow-y-auto">
-          {title && <h2 className="font-semibold text-2xl mb-8">{title}</h2>}
+        <div className={bodyStyle()}>
+          {title && <h2 className={titleStyle()}>{title}</h2>}
           {children}
         </div>
       </div>
-      <form method="dialog" className="modal-backdrop" aria-hidden>
-        {/* clickable background overlay */}
-        <button className="cursor-default" tabIndex={-1}></button>
+      <form method="dialog" className={backdropStyle()} aria-hidden>
+        <button className={backdropButtonStyle()} tabIndex={-1}></button>
       </form>
     </dialog>
   );
-});
+}

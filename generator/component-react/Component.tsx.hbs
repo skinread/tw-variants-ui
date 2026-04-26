@@ -1,5 +1,9 @@
 export interface {{pascalCase name}}Props {
   /**
+   * Root element ref (React 19+ `ref` as a normal prop)
+   */
+  ref?: React.Ref<HTMLDivElement>;
+  /**
    * Define your props here
    */
   exampleProp?: string;
@@ -9,7 +13,7 @@ export interface {{pascalCase name}}Props {
  * describe the {{pascalCase name}} component here
  */
 export const {{pascalCase name}} = (props: {{pascalCase name}}Props) => {
-  const { exampleProp, ...restProps } = props;
+  const { ref, exampleProp, ...restProps } = props;
 
-  return <div>{{pascalCase name}} says {exampleProp}</div>;
+  return <div ref={ref} {...restProps}>{{pascalCase name}} says {exampleProp}</div>;
 };

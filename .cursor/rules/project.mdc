@@ -1,0 +1,35 @@
+---
+description: tw-variants-ui project context and agent defaults
+alwaysApply: true
+---
+
+# tw-variants-ui
+
+React + Tailwind + DaisyUI component library (ESM). **Full detail:** root `AGENTS.md`.
+
+## Commands
+
+- `npm install` — deps
+- `npm run dev` — Storybook (port 6006)
+- `npm run build` — library + CSS + themes to `dist/`
+- `npm test` / `npm run test:ui` — Vitest
+- `npm run lint` / `npm run format` / `npm run typecheck`
+- `npm run generate:component` — Plop scaffold
+
+## Layout
+
+- `src/components/react/{Name}/{Name}.tsx` — components; barrel `src/components/react/index.ts`
+- `src/common/` — shared variant helpers (e.g. `buttonVariants`)
+- `src/themes/`, `src/tailwind-preset.js`, `src/styles/` — Tailwind/DaisyUI wiring
+- `src/tokens/` — design tokens (Phase 1+)
+- `src/stories/` — Storybook
+- `generator/plopfile.js` — component generator
+
+## Generator
+
+New exports must use the hook in `index.ts`: `/* generator:new component */` — Plop appends here.
+
+## Agent behavior
+
+- Prefer small, task-scoped changes; match existing naming and imports.
+- Do not remove the generator comment or break barrel exports.

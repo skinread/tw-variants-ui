@@ -11,9 +11,10 @@ const preview: Preview = {
     withThemeByDataAttribute({
       themes: {
         Aqua: 'aqua',
+        Cyberpunk: 'cyberpunk',
         Custom: 'custom',
-        Fantasy: 'fantasy',
-        Garden: 'garden',
+        Luxury: 'luxury',
+        Coffee: 'coffee',
         Retro: 'retro',
         Synthwave: 'synthwave',
       },
@@ -35,7 +36,7 @@ const preview: Preview = {
       options: {
         neutral: {
           name: 'neutral',
-          value: 'hsl(var(--vui-color-background))',
+          value: 'var(--color-base-100, var(--vui-color-background, #ffffff))',
         },
       },
     },

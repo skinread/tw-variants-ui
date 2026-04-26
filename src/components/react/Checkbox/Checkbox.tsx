@@ -1,9 +1,9 @@
-import { forwardRef, useRef } from 'react';
+import { useRef } from 'react';
 import { inputVariants, validityFromProps } from '@common';
 import { type CommonFieldProps } from '@components/react';
 import { FieldFeedback } from '../InputField/FieldFeedback';
 
-type ComponentProps = Omit<React.ComponentPropsWithoutRef<'input'>, 'name'>;
+type ComponentProps = Omit<React.ComponentPropsWithRef<'input'>, 'name' | 'type'>;
 
 type CommonFieldPropsFiltered = Pick<CommonFieldProps, 'name' | 'hasError' | 'feedbackContent'>;
 
@@ -21,33 +21,31 @@ export interface CheckboxProps extends CommonFieldPropsFiltered, ComponentProps 
 /**
  * Styled checkbox input field. React `ref` enabled. Also exposes intrinsic `<input>` attributes.
  */
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  function VuiCheckbox(props, ref) {
-    const { feedbackContent, hasError, id: idProp, label, ...elemAttrs } = props;
-    const {
-      wrapper: wrapperStyle,
-      label: labelStyle,
-      labelText: labelTextStyle,
-      input: inputStyle,
-    } = inputVariants({ type: 'checkbox', validity: validityFromProps({ hasError }) });
+export function Checkbox(props: CheckboxProps) {
+  const { ref, feedbackContent, hasError, id: idProp, label, ...elemAttrs } = props;
+  const {
+    wrapper: wrapperStyle,
+    label: labelStyle,
+    labelText: labelTextStyle,
+    input: inputStyle,
+  } = inputVariants({ type: 'checkbox', validity: validityFromProps({ hasError }) });
 
-    const id = useRef(idProp ?? `checkbox-${props.name}`);
-    const idFeedback = `${id.current}-feedback`;
+  const id = useRef(idProp ?? `checkbox-${props.name}`);
+  const idFeedback = `${id.current}-feedback`;
 
-    return (
-      <div className={wrapperStyle()}>
-        <div className="flex">
-          <label className={labelStyle()}>
-            <input type="checkbox" className={inputStyle()} {...elemAttrs} ref={ref} />
-            <span className={labelTextStyle()}>{label}</span>
-          </label>
-        </div>
-        <FieldFeedback
-          feedbackContent={feedbackContent}
-          idFeedback={idFeedback}
-          hasError={hasError}
-        />
+  return (
+    <div className={wrapperStyle()}>
+      <div className="flex">
+        <label className={labelStyle()}>
+          <input type="checkbox" className={inputStyle()} {...elemAttrs} ref={ref} />
+          <span className={labelTextStyle()}>{label}</span>
+        </label>
       </div>
-    );
-  }
-);
+      <FieldFeedback
+        feedbackContent={feedbackContent}
+        idFeedback={idFeedback}
+        hasError={hasError}
+      />
+    </div>
+  );
+}

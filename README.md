@@ -30,11 +30,12 @@ _Skip over Tailwind steps if you are using the stand-alone CSS option._
 #### Initialise Tailwind and plugins
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer daisyui tw-colors
-npx tailwindcss init -p
+npm install -D tailwindcss @tailwindcss/postcss postcss daisyui
 ```
 
-This will add the `tailwind.config.js` to your root foolder.
+Configure PostCSS to use `@tailwindcss/postcss` (Tailwind v4). See [Tailwind CSS v4 docs](https://tailwindcss.com/docs/installation) for your bundler.
+
+This will add a Tailwind config (or CSS-first setup) in your project root.
 
 #### Use preset
 
@@ -46,12 +47,11 @@ import twVUI from 'tw-variants-ui/tailwind-preset';
 /** @type {import('tailwindcss').Config} */
 export default {
   presets: [twVUI],
-  .
-  .
-  .
+  // …extend as needed
 };
-
 ```
+
+Optional: import design token values from `tw-variants-ui/tokens` for tooling or documentation.
 
 You can extend all the usual Tailwind config following on from the preset, for reference see [Tailwind Docs](https://tailwindcss.com/docs/guides/vite)
 
@@ -68,7 +68,7 @@ Ensure the standard Tailwind directives are added to the application stylesheet.
 Once all installation steps are complete you simply import the components into your React application and configure the props:
 
 ```js
-import { Button } from 'tw-varants-ui';
+import { Button } from 'tw-variants-ui/react';
 
 const MyComponent = () => {
   return (
@@ -86,10 +86,6 @@ const MyComponent = () => {
 To develop locally Storybook is used. You will need to start up the tests in watch mode as well as Storybook itself. They need to run separately so use two terminal windows:
 
 ```bash
-npm run storybook:test
-```
-
-```bash
 npm run dev
 ```
 
@@ -105,7 +101,7 @@ The following npm scripts are available for developing locally:
 - `format`: Prettify source code.
 - `lint`: Lint source code with eslint.
 - `dev`: Start Storybook locally.
-- `dev:test`: Runs Storybook test suite in watch mode for local development (_requires Storybook to be running_).
+- `test:ui`: Vitest UI (Storybook tests via addon when configured).
 - `build`: Outputs components, themes and compiled css to dist folder for publishing.
 - `release`: Kick off the Release-It process in interactive mode.
 - `test`: Test coverage by building and serving Storybook

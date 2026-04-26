@@ -1,42 +1,27 @@
-/**
- * Custom semantic colours
- */
-const semanticColours = {
-  background: '#ffffff',
-  foreground: '#222222',
-  subtle: '#757575',
-  link: '#195332',
+import { lightSemanticColors } from '../tokens/semantic.js';
 
-  neutral: '#9AF5C1',
-  'neutral-focus': '#3BC576',
-  'neutral-content': '#222222',
+const semanticColours = lightSemanticColors;
 
-  primary: '#43E187',
-  'primary-focus': '#2A8C54',
-  'primary-content': '#222222',
-
-  secondary: '#32A865',
-
-  accent: '#6CF1A5', //#C8FADD
-
-  info: '#234e9c',
-  success: '#2A8C54',
-  warning: '#ff9900',
-  error: '#712314',
-  'warning-content': '#ffffff',
-  'focus-ring': '#153ff9',
-};
-
-/**
- * Theme tokens for Tailwind/tw-colors
- */
+/** DaisyUI theme colour map (custom preset) */
 const colors = {
   ...semanticColours,
 };
 
 export const customVars = {
-  // _____ CUSTOM VARIABLES ______
+  // DaisyUI v4 name kept for our own component classes that still use it
   '--rounded-field': '10px',
+  // DaisyUI v5 equivalents applied to :root so the custom theme has the right
+  // radius/sizing values; built-in themes (synthwave, retro …) override these
+  // on their own [data-theme] selector.
+  '--radius-selector': '10px',
+  '--radius-field': '10px',
+  '--radius-box': '12px',
+  '--size-selector': '0.25rem',
+  '--size-field': '0.25rem',
+  '--border': '1px',
+  '--depth': '1',
+  '--noise': '0',
+  // component-level custom variables
   '--vui-radio-size': '1.75rem',
   '--vui-checkbox-size': '1.75rem',
 };

@@ -10,8 +10,11 @@ import {
 
 # Design Tokens
 
-These tokens reflect what is configured in code and are a _work in progress_,
-they do not yet reflect all design decisions nor the final naming convention.
+Semantic colours are defined once in `src/tokens/semantic.js` and reused by:
+
+- **`tokens` export** (`tw-variants-ui/tokens`) — JS object for tooling and tests
+- **DaisyUI themes** — `src/themes/custom.js` (light/custom) and `src/themes/dark.js`
+- **CSS variables** — the custom palette (`--color-*` / `--vui-color-*`) is scoped to `data-theme="custom"`; other themes use DaisyUI’s `--color-*` on `[data-theme=…]`, with `--vui-color-*` aliased to `--color-*` so legacy tokens track the active theme
 
 ### Theme overview
 
