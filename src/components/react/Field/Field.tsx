@@ -63,7 +63,7 @@ function useFieldContext() {
 function assignRef<T>(ref: React.Ref<T> | undefined, node: T | null) {
   if (!ref) return;
   if (typeof ref === 'function') ref(node);
-  else (ref as React.MutableRefObject<T | null>).current = node;
+  else ref.current = node;
 }
 
 const FIELD_INPUT_META = [
@@ -160,18 +160,16 @@ function FieldInput(props: FieldInputProps) {
     [ref]
   );
 
-  const isPassword = useRef(type === 'password');
+  const isPassword = type === 'password';
   const [revealPassword, setRevealPassword] = useState(false);
-  const getCurrentType = () => {
-    if (isPassword.current && revealPassword) return 'text';
-    return type;
-  };
+  const currentType = isPassword && revealPassword ? 'text' : type;
 
   const toggleRevealPassword = () => {
     setRevealPassword(!revealPassword);
     setTimeout(() => {
+      const length = fieldRef.current?.value.length ?? 0;
       fieldRef.current?.focus();
-      fieldRef.current?.setSelectionRange(99, 99);
+      fieldRef.current?.setSelectionRange(length, length);
     });
   };
 
@@ -189,16 +187,16 @@ function FieldInput(props: FieldInputProps) {
   return (
     <div className="flex">
       <input
-        type={getCurrentType()}
+        type={currentType}
         id={ctx.fieldId}
         name={name}
-        className={inputStyle({ class: 'w-full', hasToggle: isPassword.current })}
+        className={inputStyle({ class: 'w-full', hasToggle: isPassword })}
         aria-labelledby={ctx.hasFeedbackSlot ? ctx.idFeedback : undefined}
         aria-describedby={ctx.hasDescriptionSlot ? ctx.idDescription : undefined}
         {...elemAttrs}
         ref={setInputRef}
       />
-      {isPassword.current && <RevealButton />}
+      {isPassword && <RevealButton />}
     </div>
   );
 }

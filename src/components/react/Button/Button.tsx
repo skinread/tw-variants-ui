@@ -34,7 +34,7 @@ export interface ButtonProps extends ButtonVariantsWithDocs, ButtonPropsFiltered
 function assignRef<T>(ref: React.Ref<T> | undefined, node: T | null) {
   if (!ref) return;
   if (typeof ref === 'function') ref(node);
-  else (ref as React.MutableRefObject<T | null>).current = node;
+  else ref.current = node;
 }
 
 /**
@@ -55,7 +55,7 @@ export const Button = (props: ButtonProps) => {
   const classes = buttonVariants({ color, fullWidth, class: className });
 
   if (render) {
-    const childRef = (render as React.ReactElement & { ref?: React.Ref<HTMLElement> }).ref;
+    const childRef = render.props.ref;
     const externalAttrs: Record<string, string> = isExternal
       ? { rel: 'noopener noreferrer', target: '_blank' }
       : {};

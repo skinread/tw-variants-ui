@@ -2,6 +2,7 @@ import daisyui from 'daisyui';
 import plugin from 'tailwindcss/plugin';
 import { fontFamily, defaultExtensions } from './themes';
 import { themeCustom, customVars } from './themes/custom';
+import { themeDark } from './themes/dark';
 
 /** @type {import('tailwindcss').Config} */
 const preset = {
@@ -40,10 +41,28 @@ const preset = {
       Object.entries(customVars).forEach(([key, value]) => {
         customThemeVars[key] = value;
       });
+      const darkThemeVars = {};
+      Object.entries(themeDark.colors).forEach(([key, value]) => {
+        darkThemeVars[`--color-${key}`] = value;
+        darkThemeVars[`--vui-color-${key}`] = value;
+      });
+      Object.entries(customVars).forEach(([key, value]) => {
+        darkThemeVars[key] = value;
+      });
       addBase({
         '[data-theme="custom"]': {
           ...themeCustom.config,
           ...customThemeVars,
+        },
+        '[data-theme="dark"]': {
+          ...themeDark.config,
+          ...darkThemeVars,
+        },
+        '@media (prefers-color-scheme: dark)': {
+          ':root:not([data-theme])': {
+            ...themeDark.config,
+            ...darkThemeVars,
+          },
         },
       });
 
